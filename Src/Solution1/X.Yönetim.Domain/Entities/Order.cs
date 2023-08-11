@@ -13,7 +13,7 @@ namespace X.Yönetim.Domain.Entities
         public string OrderDetail { get; set; }
         public DateTime? OrderDate { get; set; }
         public OrderType OrderType { get; set; }
-        public Person Person { get; set; }
+        public Person Person { get; set; }  
     }
 
 

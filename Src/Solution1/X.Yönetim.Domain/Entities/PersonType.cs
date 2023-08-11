@@ -12,6 +12,8 @@ namespace X.Yönetim.Domain.Entities
         public string Name { get; set; }
 
         //Navigation Property
-        ICollection<Person> Persons { get; set; }
+        public ICollection<Person> Persons { get; set; }
+        public  ICollection<Statement> Statements { get; set; }
+        
     }
 }

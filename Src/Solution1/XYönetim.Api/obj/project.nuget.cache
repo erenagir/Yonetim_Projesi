@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HniItnsnorhvPelRaf8iBsMmf8DFGT0wbmcOrO5wZPgy/gx/+dGg+FEjz9plxSdxkCgzkUXf2RbRc/zae9mLBg==",
+  "dgSpecHash": "W2OfQNbvawXnGB1x90ymvfRmI48hYcHXwta74SHum6Lj3rx0s2kV2MJrubbeuWXYXrIuKc1HgsAsb/kHufBu4g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\agir_\\OneDrive\\Masaüstü\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\X.Yönetim.Api\\X.Yönetim.Api.csproj",
+  "projectFilePath": "C:\\Users\\agir_\\OneDrive\\Masaüstü\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\XYönetim.Api\\XYönetim.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\agir_\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\agir_\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

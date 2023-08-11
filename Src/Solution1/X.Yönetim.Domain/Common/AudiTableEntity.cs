@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace X.Yönetim.Domain.Common
 {
-    public class AudiTableEntity:BaseEntity
+    public abstract class AudiTableEntity:BaseEntity
     {
         public DateTime? CreateDate { get; set; }
         public DateTime? ModifiedDate { get; set; }

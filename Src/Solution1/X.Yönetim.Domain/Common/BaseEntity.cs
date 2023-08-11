@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace X.Yönetim.Domain.Common
 {
-    public class BaseEntity
+    public abstract class BaseEntity
     {
         public int Id { get; set; }
         public bool? IsDeleted { get; set; }

@@ -1,4 +1,4 @@
-namespace X.Yönetim.Api
+namespace XYönetim.Api
 {
     public class WeatherForecast
     {

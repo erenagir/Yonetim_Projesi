@@ -17,10 +17,12 @@ namespace X.Yönetim.Domain.Entities
         public DateTime? LastLoginDate { get; set; }
         public string LastUserIp { get; set; }
         public Roles Role { get; set; }
+        public Person Person { get; set; }
     }
     public enum Roles
     {
         User = 1,
-        Admin = 2
+        Admin = 2,
+        SAdmin= 3
     }
 }
