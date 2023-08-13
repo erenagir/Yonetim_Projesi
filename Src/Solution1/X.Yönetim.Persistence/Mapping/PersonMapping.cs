@@ -53,7 +53,11 @@ namespace X.Yönetim.Persistence.Mapping
             builder.Property(x=>x.Salary)
                 .HasColumnName("SALARY")
                 .HasColumnOrder (10);
-           
+
+            builder.HasOne(x => x.PersonType)
+                .WithMany(x => x.Persons)
+                .HasForeignKey(x => x.PersonTypeId)
+           .HasConstraintName("PERSONS_PERSONTYPE_PERSONTYPE_ID");
             
             builder.ToTable("PERSON");
         }
