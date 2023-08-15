@@ -13,9 +13,7 @@ namespace X.Yönetim.Persistence.Mapping
     {
         public override void ConfigureDerivedEntityMapping(EntityTypeBuilder<Person> builder)
         {
-            builder.Property(x => x.PersonTypeId)
-                .HasColumnName("PERSONTYPE_ID")
-                .HasColumnOrder(2);
+            
            
             builder.Property(x => x.Name)
                 .HasColumnName("NAME")
@@ -50,14 +48,7 @@ namespace X.Yönetim.Persistence.Mapping
                 .HasColumnName("GENDER")
                 .IsRequired()
                 .HasColumnOrder(9);
-            builder.Property(x=>x.Salary)
-                .HasColumnName("SALARY")
-                .HasColumnOrder (10);
-
-            builder.HasOne(x => x.PersonType)
-                .WithMany(x => x.Persons)
-                .HasForeignKey(x => x.PersonTypeId)
-           .HasConstraintName("PERSONS_PERSONTYPE_PERSONTYPE_ID");
+           
             
             builder.ToTable("PERSON");
         }

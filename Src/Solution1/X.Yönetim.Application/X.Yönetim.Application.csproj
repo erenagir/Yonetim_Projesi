@@ -15,4 +15,11 @@
     <ProjectReference Include="..\X.Yönetim.Domain\X.Yönetim.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\Dtos\" />
+    <Folder Include="Models\RequestModels\" />
+    <Folder Include="Services\Abstraction\" />
+    <Folder Include="Services\Implementation\" />
+  </ItemGroup>
+
 </Project>

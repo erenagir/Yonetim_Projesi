@@ -10,7 +10,7 @@ namespace X.Yönetim.Domain.Entities
     public class Person:AudiTableEntity
     {
         
-        public int PersonTypeId { get; set; }
+       
         public string Name { get; set; }
         public string SurName { get; set; }
         public string IdentityNumber { get; set; }
@@ -18,15 +18,17 @@ namespace X.Yönetim.Domain.Entities
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
         public Gender Gender { get; set; }
-        public decimal Salary { get; set; }
+        
 
         //Navigation Property
 
         public Account Account { get; set; }
-        public PersonType PersonType { get; set; }
-        public ICollection<Order> Orders { get; set; }
-
-
+        
+        public ICollection<Income> Incomes { get; set; }
+        public ICollection<Expense> Expenses { get; set; }
+        public ICollection<Budget> Budgets { get; set; }
+        public ICollection<Goal> Goals { get; set; }
+        public ICollection<Transaction> Transactions { get; set; }
     }
     
     public enum Gender

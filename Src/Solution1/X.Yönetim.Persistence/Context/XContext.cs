@@ -20,16 +20,14 @@ namespace X.Yönetim.Persistence.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new AccountMapping());
-            modelBuilder.ApplyConfiguration(new OrderMapping());
+            
             modelBuilder.ApplyConfiguration(new PersonMapping());
-            modelBuilder.ApplyConfiguration(new PersonTypeMapping());
-            modelBuilder.ApplyConfiguration(new StatementMapping());
+            
             //entity türleri için is deleted bilgisi false olanları otomatik filtreleme yapar
             modelBuilder.Entity<Account>().HasQueryFilter(x => x.IsDeleted == null || (x.IsDeleted.HasValue && !x.IsDeleted.Value));            
-            modelBuilder.Entity<Order>().HasQueryFilter(x => x.IsDeleted == null || (x.IsDeleted.HasValue && !x.IsDeleted.Value));
+           
             modelBuilder.Entity<Person>().HasQueryFilter(x => x.IsDeleted == null || (x.IsDeleted.HasValue && !x.IsDeleted.Value));
-            modelBuilder.Entity<PersonType>().HasQueryFilter(x => x.IsDeleted == null || (x.IsDeleted.HasValue && !x.IsDeleted.Value));
-            modelBuilder.Entity<Statement>().HasQueryFilter(x => x.IsDeleted == null || (x.IsDeleted.HasValue && !x.IsDeleted.Value));
+           
         }
 
 

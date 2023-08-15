@@ -40,15 +40,13 @@ namespace X.Yönetim.Persistence.Mapping
                 .IsRequired(false)
                 .HasColumnOrder(6);
 
-            builder.Property(x => x.Role)
-                .HasColumnName("ROLE_ID")
-                .HasColumnOrder(7);
+          
             
             
             //Navigation property
             builder.HasOne(x => x.Person)
                 .WithOne(x=>x.Account)
-                .HasForeignKey<Account>(x => x.PersonID)
+                .HasForeignKey<Account>(x => x.PersonID) 
                 .HasConstraintName("ACCOUNT_PERSON_PERSON_ID");
 
             builder.ToTable("ACCOUNTS");
