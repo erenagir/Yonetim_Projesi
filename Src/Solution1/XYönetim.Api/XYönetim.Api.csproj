@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\X.Yönetim.Application\X.Yönetim.Application.csproj" />
     <ProjectReference Include="..\X.Yönetim.Persistence\X.Yönetim.Persistence.csproj" />
   </ItemGroup>
 

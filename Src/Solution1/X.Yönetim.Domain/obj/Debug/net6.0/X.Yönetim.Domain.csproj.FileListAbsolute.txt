@@ -1,0 +1,12 @@
+C:\Users\agir_\OneDrive\Masaüstü\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Domain\bin\Debug\net6.0\X.Yönetim.Domain.deps.json
+C:\Users\agir_\OneDrive\Masaüstü\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Domain\bin\Debug\net6.0\X.Yönetim.Domain.dll
+C:\Users\agir_\OneDrive\Masaüstü\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Domain\bin\Debug\net6.0\X.Yönetim.Domain.pdb
+C:\Users\agir_\OneDrive\Masaüstü\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Domain\obj\Debug\net6.0\X.Yönetim.Domain.csproj.AssemblyReference.cache
+C:\Users\agir_\OneDrive\Masaüstü\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Domain\obj\Debug\net6.0\X.Yönetim.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\agir_\OneDrive\Masaüstü\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Domain\obj\Debug\net6.0\X.Yönetim.Domain.AssemblyInfoInputs.cache
+C:\Users\agir_\OneDrive\Masaüstü\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Domain\obj\Debug\net6.0\X.Yönetim.Domain.AssemblyInfo.cs
+C:\Users\agir_\OneDrive\Masaüstü\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Domain\obj\Debug\net6.0\X.Yönetim.Domain.csproj.CoreCompileInputs.cache
+C:\Users\agir_\OneDrive\Masaüstü\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Domain\obj\Debug\net6.0\X.Yönetim.Domain.dll
+C:\Users\agir_\OneDrive\Masaüstü\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Domain\obj\Debug\net6.0\refint\X.Yönetim.Domain.dll
+C:\Users\agir_\OneDrive\Masaüstü\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Domain\obj\Debug\net6.0\X.Yönetim.Domain.pdb
+C:\Users\agir_\OneDrive\Masaüstü\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Domain\obj\Debug\net6.0\ref\X.Yönetim.Domain.dll

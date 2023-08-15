@@ -17,16 +17,14 @@ namespace X.Yönetim.Persistence.Mapping
             builder.Property(x => x.PersonId)
                 .HasColumnName("PERSON_ID")
                 .HasColumnOrder(3);
-           
+
             builder.Property(x => x.OrderDetail)
                 .HasColumnName("ORDER_DETAIL")
+                .HasColumnType("nvarchar(max)")
                 .IsRequired()
                 .HasColumnOrder(4);
 
-            builder.Property(x => x.OrderDate)
-                .HasColumnName("ORDER_DATE")
-                .HasDefaultValueSql("getdate()")
-                .HasColumnOrder(5);
+           
 
             builder.Property(x => x.OrderType)
                 .HasColumnName("ORDER_TYPE")

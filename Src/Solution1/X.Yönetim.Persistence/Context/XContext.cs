@@ -1,12 +1,77 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using X.Yönetim.Domain.Common;
+using X.Yönetim.Domain.Entities;
+using X.Yönetim.Persistence.Mapping;
 
 namespace X.Yönetim.Persistence.Context
 {
-    internal class XContext
+    public class XContext : DbContext
     {
+        public XContext(DbContextOptions<XContext> options) : base(options)
+        {
+
+        }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new AccountMapping());
+            modelBuilder.ApplyConfiguration(new OrderMapping());
+            modelBuilder.ApplyConfiguration(new PersonMapping());
+            modelBuilder.ApplyConfiguration(new PersonTypeMapping());
+            modelBuilder.ApplyConfiguration(new StatementMapping());
+            //entity türleri için is deleted bilgisi false olanları otomatik filtreleme yapar
+            modelBuilder.Entity<Account>().HasQueryFilter(x => x.IsDeleted == null || (x.IsDeleted.HasValue && !x.IsDeleted.Value));            
+            modelBuilder.Entity<Order>().HasQueryFilter(x => x.IsDeleted == null || (x.IsDeleted.HasValue && !x.IsDeleted.Value));
+            modelBuilder.Entity<Person>().HasQueryFilter(x => x.IsDeleted == null || (x.IsDeleted.HasValue && !x.IsDeleted.Value));
+            modelBuilder.Entity<PersonType>().HasQueryFilter(x => x.IsDeleted == null || (x.IsDeleted.HasValue && !x.IsDeleted.Value));
+            modelBuilder.Entity<Statement>().HasQueryFilter(x => x.IsDeleted == null || (x.IsDeleted.HasValue && !x.IsDeleted.Value));
+        }
+
+
+        public override Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess, CancellationToken cancellationToken = default)
+        {
+            //Herhangi bir kayıt işleminde yapılan işlem ekleme ise CreateDate ve CreatedBy bilgileri otomatik olarak set edilir.
+            //Herhangi bir kayıt işleminde yapılan işlem güncelleme ise ModifiedDate ve ModifiedBy bilgileri otomatik olarak set edilir.
+            var entries = ChangeTracker.Entries<BaseEntity>().ToList();
+            foreach (var entry in entries)
+            {
+                if (entry.State == EntityState.Deleted)
+                {
+                    entry.Entity.IsDeleted = true;
+                    entry.State = EntityState.Modified;
+                }
+                if (entry.Entity is AudiTableEntity auditableEntity)
+                {
+                    switch (entry.State)
+                    {
+                        //update
+                        case EntityState.Modified:
+                            auditableEntity.ModifiedDate = DateTime.Now;
+                            auditableEntity.ModifiedBy = "admin";
+                            break;
+                        //insert
+                        case EntityState.Added:
+                            auditableEntity.CreateDate = DateTime.Now;
+                            auditableEntity.CreatedBy = "admin";
+                            break;
+                        //delete
+                        //case EntityState.Deleted:
+                        //    auditableEntity.ModifiedDate = DateTime.Now;
+                        //    auditableEntity.ModifiedBy =  "admin";
+                        //    break;
+                        default:
+                            break;
+                    }
+
+
+                }                
+            }
+            return base.SaveChangesAsync(acceptAllChangesOnSuccess, cancellationToken);
+        }
     }
 }

@@ -11,16 +11,15 @@ namespace X.Yönetim.Domain.Entities
     {
         public  int PersonId { get; set; }
         public string OrderDetail { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public OrderType OrderType { get; set; }
+       public OrderType OrderType { get; set; }
         public Person Person { get; set; }  
     }
 
 
     public enum OrderType
     {
-        Income=1,
-        Expense=2
+        Income=1,//gelir
+        Expense=2// gider
 
     }
 }
