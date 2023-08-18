@@ -9,15 +9,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Infrastructure", "2-Infra
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-Api", "3-Api", "{3504CB0C-4082-41FA-9C00-AC4B83E104A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X.Yönetim.Application", "X.Yönetim.Application\X.Yönetim.Application.csproj", "{3D6D0E2E-2F95-43F3-BD40-8C9B50ED0A51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "X.Yönetim.Application", "X.Yönetim.Application\X.Yönetim.Application.csproj", "{3D6D0E2E-2F95-43F3-BD40-8C9B50ED0A51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X.Yönetim.Domain", "X.Yönetim.Domain\X.Yönetim.Domain.csproj", "{C04E9CA8-A1B5-44E6-B285-CC8F7E17C1BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "X.Yönetim.Domain", "X.Yönetim.Domain\X.Yönetim.Domain.csproj", "{C04E9CA8-A1B5-44E6-B285-CC8F7E17C1BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X.Yönetim.Infrastructure", "X.Yönetim.Infrastructure\X.Yönetim.Infrastructure.csproj", "{51883A45-B30C-47BE-80F4-12F2F4FF5D5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "X.Yönetim.Infrastructure", "X.Yönetim.Infrastructure\X.Yönetim.Infrastructure.csproj", "{51883A45-B30C-47BE-80F4-12F2F4FF5D5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X.Yönetim.Persistence", "X.Yönetim.Persistence\X.Yönetim.Persistence.csproj", "{AD9FD93C-6F78-4923-ADDB-5A20066BC179}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "X.Yönetim.Persistence", "X.Yönetim.Persistence\X.Yönetim.Persistence.csproj", "{AD9FD93C-6F78-4923-ADDB-5A20066BC179}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XYönetim.Api", "XYönetim.Api\XYönetim.Api.csproj", "{CE9E494C-0272-44D1-9021-037684C780F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XYönetim.Api", "XYönetim.Api\XYönetim.Api.csproj", "{CE9E494C-0272-44D1-9021-037684C780F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XYönetim.Utils", "XYönetim.Utils\XYönetim.Utils.csproj", "{2A070A47-B162-459C-8F85-27D2374C0EA3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{CE9E494C-0272-44D1-9021-037684C780F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE9E494C-0272-44D1-9021-037684C780F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE9E494C-0272-44D1-9021-037684C780F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A070A47-B162-459C-8F85-27D2374C0EA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A070A47-B162-459C-8F85-27D2374C0EA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A070A47-B162-459C-8F85-27D2374C0EA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A070A47-B162-459C-8F85-27D2374C0EA3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +61,7 @@ Global
 		{51883A45-B30C-47BE-80F4-12F2F4FF5D5D} = {10D4BEFA-14B9-4725-A2E4-A9DF29BDBA8F}
 		{AD9FD93C-6F78-4923-ADDB-5A20066BC179} = {10D4BEFA-14B9-4725-A2E4-A9DF29BDBA8F}
 		{CE9E494C-0272-44D1-9021-037684C780F7} = {3504CB0C-4082-41FA-9C00-AC4B83E104A2}
+		{2A070A47-B162-459C-8F85-27D2374C0EA3} = {10D4BEFA-14B9-4725-A2E4-A9DF29BDBA8F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AC855C27-A629-4F70-9E68-812E226208C8}

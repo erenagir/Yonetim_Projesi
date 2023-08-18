@@ -13,7 +13,7 @@ namespace X.Yönetim.Application.AutoMapper
     {
         public DomainToDtoModel()
         {
-
+           
         }
     }
 }
