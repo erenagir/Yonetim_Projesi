@@ -41,6 +41,11 @@ namespace X.Yönetim.Persistence.Mapping
            .HasForeignKey(x=>x.PersonId)
            .OnDelete(DeleteBehavior.NoAction);
 
+            builder.HasOne(x=>x.Budget)
+                .WithMany(u => u.Incomes)
+                .HasForeignKey(x=>x.BudgetId)
+                .OnDelete(DeleteBehavior.NoAction);
+
             builder.ToTable("INCOMES");
         }
 

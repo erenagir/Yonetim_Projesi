@@ -13,28 +13,32 @@ namespace X.Yönetim.Persistence.Mapping
     {
         public override void ConfigureDerivedEntityMapping(EntityTypeBuilder<Budget> builder)
         {
+            builder.Property(x => x.PersonId)
+                 .HasColumnName("PERSONID")
+                 .HasColumnOrder(2);
+            
             builder.Property(x => x.Name)
                 .HasColumnType("nvarchar(50)")
                 .HasColumnName("NAME")
-                .HasColumnOrder(2)
+                .HasColumnOrder(3)
                 .IsRequired();
 
             builder.Property(x => x.Amount)
                 .HasColumnType("decimal(18, 2)")
                 .HasColumnName("AMOUNT")
-                .HasColumnOrder(3)
+                .HasColumnOrder(4)
                 .IsRequired();
             
             builder.Property(x => x.StartDate)
                 .HasColumnType("date")
                 .HasColumnName("STARTDATE")
-                .HasColumnOrder(4)
+                .HasColumnOrder(5)
                 .IsRequired();
             
             builder.Property(x => x.EndDate)
                 .HasColumnType("date")
                 .HasColumnName("ENDDATE")
-                .HasColumnOrder (5)
+                .HasColumnOrder (6)
                 .IsRequired();
 
             builder.HasOne(x => x.Person)

@@ -20,14 +20,27 @@ namespace X.Yönetim.Persistence.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new AccountMapping());
-            
-            modelBuilder.ApplyConfiguration(new PersonMapping());
-            
+            modelBuilder.ApplyConfiguration(new BudgetMapping());
+            modelBuilder.ApplyConfiguration(new ExpenseMapping());
+            modelBuilder.ApplyConfiguration(new GoalMapping());
+            modelBuilder.ApplyConfiguration(new IncomeMapping());
+         
+            modelBuilder.ApplyConfiguration(new UserImageMapping());
+            modelBuilder.ApplyConfiguration(new UserMapping());
+
             //entity türleri için is deleted bilgisi false olanları otomatik filtreleme yapar
-            modelBuilder.Entity<Account>().HasQueryFilter(x => x.IsDeleted == null || (x.IsDeleted.HasValue && !x.IsDeleted.Value));            
+            modelBuilder.Entity<Account>().HasQueryFilter(x => x.IsDeleted == null || (x.IsDeleted.HasValue && !x.IsDeleted.Value));
+            modelBuilder.Entity<Budget>().HasQueryFilter(x =>x.IsDeleted == null || (x.IsDeleted.HasValue && !x.IsDeleted.Value));
+            modelBuilder.Entity<Expense>().HasQueryFilter(x => x.IsDeleted == null || (x.IsDeleted.HasValue && !x.IsDeleted.Value));
+            modelBuilder.Entity<Goal>().HasQueryFilter(x => x.IsDeleted == null || (x.IsDeleted.HasValue && !x.IsDeleted.Value));
+            modelBuilder.Entity<Income>().HasQueryFilter(x => x.IsDeleted == null || (x.IsDeleted.HasValue && !x.IsDeleted.Value));
+          
+            modelBuilder.Entity<UserImage>().HasQueryFilter(x => x.IsDeleted == null || (x.IsDeleted.HasValue && !x.IsDeleted.Value));
+            modelBuilder.Entity<User>().HasQueryFilter(x => x.IsDeleted == null || (x.IsDeleted.HasValue && !x.IsDeleted.Value));
+
            
-            modelBuilder.Entity<Person>().HasQueryFilter(x => x.IsDeleted == null || (x.IsDeleted.HasValue && !x.IsDeleted.Value));
-           
+
+
         }
 
 

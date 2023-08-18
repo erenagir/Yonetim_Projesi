@@ -14,7 +14,7 @@ namespace X.Yönetim.Domain.Entities
         public DateTime TargetDate { get; set; }
         public string Description { get; set; }
 
-        public Person Person { get; set; }
+        public User Person { get; set; }
 
     }
 }

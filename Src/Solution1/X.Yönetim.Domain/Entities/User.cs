@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using X.Yönetim.Domain.Common;
 
 namespace X.Yönetim.Domain.Entities
 {
-    public class Person:AudiTableEntity
+    public class User:AudiTableEntity
     {
         
        
@@ -18,7 +19,8 @@ namespace X.Yönetim.Domain.Entities
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
         public Gender Gender { get; set; }
-        
+        public Roles Role { get; set; }
+
 
         //Navigation Property
 
@@ -28,12 +30,18 @@ namespace X.Yönetim.Domain.Entities
         public ICollection<Expense> Expenses { get; set; }
         public ICollection<Budget> Budgets { get; set; }
         public ICollection<Goal> Goals { get; set; }
-        public ICollection<Transaction> Transactions { get; set; }
+        
+        public ICollection<UserImage> UserImage { get; set; }
     }
     
     public enum Gender
     {
         Male=1,
         Female=2
+    }
+    public enum Roles
+    {
+        Admin,
+        User,
     }
 }

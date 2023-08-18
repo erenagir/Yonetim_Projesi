@@ -9,9 +9,9 @@ using X.Yönetim.Domain.Entities;
 
 namespace X.Yönetim.Persistence.Mapping
 {
-    public class PersonMapping : AudiTableEntityMapping<Person>
+    public class UserMapping : AudiTableEntityMapping<User>
     {
-        public override void ConfigureDerivedEntityMapping(EntityTypeBuilder<Person> builder)
+        public override void ConfigureDerivedEntityMapping(EntityTypeBuilder<User> builder)
         {
             
            
@@ -21,7 +21,7 @@ namespace X.Yönetim.Persistence.Mapping
                 .IsRequired()
                 .HasColumnOrder(3);
             builder.Property(x => x.SurName)
-                .HasColumnName("NAME")
+                .HasColumnName("SURNAME")
                 .HasColumnType("nvarchar(30)")
                 .IsRequired()
                 .HasColumnOrder(4);
@@ -48,9 +48,12 @@ namespace X.Yönetim.Persistence.Mapping
                 .HasColumnName("GENDER")
                 .IsRequired()
                 .HasColumnOrder(9);
+            builder.Property(x=>x.Role)
+                .HasColumnName("ROLE")
+                .HasColumnOrder (10);
            
             
-            builder.ToTable("PERSON");
+            builder.ToTable("USER");
         }
     }
 }

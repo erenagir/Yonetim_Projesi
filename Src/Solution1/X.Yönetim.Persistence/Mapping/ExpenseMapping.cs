@@ -9,7 +9,7 @@ using X.Yönetim.Domain.Entities;
 
 namespace X.Yönetim.Persistence.Mapping
 {
-    public class EpenseMapping : AudiTableEntityMapping<Expense>
+    public class ExpenseMapping : AudiTableEntityMapping<Expense>
     {
         public override void ConfigureDerivedEntityMapping(EntityTypeBuilder<Expense> builder)
         { 
@@ -45,10 +45,14 @@ namespace X.Yönetim.Persistence.Mapping
                 .WithMany(x => x.Expenses)
                 .HasForeignKey(x => x.PersonId)
                 .OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.Budget)
+               .WithMany(u => u.Expenses)
+               .HasForeignKey(x => x.BudgetId)
+               .OnDelete(DeleteBehavior.NoAction);
 
 
 
-            builder.ToTable("Expenses");
+            builder.ToTable("EXPENSES");
 
         }
     }

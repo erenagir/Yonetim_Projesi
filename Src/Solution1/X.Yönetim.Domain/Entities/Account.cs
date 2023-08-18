@@ -17,7 +17,7 @@ namespace X.Yönetim.Domain.Entities
         public DateTime? LastLoginDate { get; set; }
         public string LastUserIp { get; set; }
         
-       public Person Person { get; set; }
+       public User Person { get; set; }
     }
     
 }
