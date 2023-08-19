@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace X.Yönetim.Application.Models.Dtos.Accounts
 {
-    internal class TokenDto
+    public class TokenDto
     {
+        public string Token { get; set; }
+        public DateTime ExpireDate { get; set; }
     }
 }

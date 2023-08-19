@@ -16,7 +16,9 @@ namespace X.Yönetim.Application.AutoMapper
             //account-User işlemleri
             CreateMap<RegisterVM, User>();
             CreateMap<RegisterVM, Account>();
-            CreateMap<UpdateUserVM, User>();
+
+            CreateMap<UpdateUserVM, User>()
+                .ForMember(x => x.Role, y => y.MapFrom(e => Roles.User));//her kayıt olanın rolü user yap
 
         }
     }

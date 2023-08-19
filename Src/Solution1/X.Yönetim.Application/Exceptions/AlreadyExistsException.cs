@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace X.Yönetim.Application.Exceptions
 {
-    internal class AlreadyExistsException
+    public class AlreadyExistsException :Exception
     {
+        public AlreadyExistsException(string message):base(message)
+        {
+            
+        }
+        public AlreadyExistsException() : base()
+        {
+
+        }
     }
 }

@@ -11,13 +11,13 @@ namespace X.Yönetim.Domain.Entities
     public class Account:AudiTableEntity
     {
 
-        public int PersonID { get; set; }
+        public int UserId { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
         public DateTime? LastLoginDate { get; set; }
         public string LastUserIp { get; set; }
         
-       public User Person { get; set; }
+       public User User { get; set; }
     }
     
 }

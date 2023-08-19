@@ -1,19 +1,47 @@
+using FluentValidation;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Serilog;
+using System.Text;
 using System.Xml.Xsl;
 using X.Yönetim.Application.AutoMapper;
+using X.Yönetim.Application.Services.Abstraction;
+using X.Yönetim.Application.Services.Implementation;
+using X.Yönetim.Application.Validators.Accounts;
 using X.Yönetim.Domain.Repositories;
+using X.Yönetim.Domain.UWork;
 using X.Yönetim.Persistence.Context;
 using X.Yönetim.Persistence.Repositories;
+using X.Yönetim.Persistence.UWork;
+using XYönetim.Api.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+//Logging
+var configuration = new ConfigurationBuilder()
+        .SetBasePath(Directory.GetCurrentDirectory())
+        .AddJsonFile("appsettings.json")
+        .Build();
 
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
+Log.Logger = new LoggerConfiguration()
+        .ReadFrom.Configuration(configuration)
+        .CreateLogger();
+
+Log.Logger.Information("Program Started...");
+
+// Add services to the container. 
+//ActionFilter registiration
+builder.Services.AddControllers(opt =>
+{
+    opt.Filters.Add(new ExceptionHandlerFilter());
+});
+
+
+
 
 builder.Services.AddSwaggerGen(c =>
 {
@@ -29,19 +57,19 @@ builder.Services.AddSwaggerGen(c =>
     });
 
     c.AddSecurityRequirement(new OpenApiSecurityRequirement
-                {
+    {
                     {
                         new OpenApiSecurityScheme
-                            {
+                        {
                                 Reference = new OpenApiReference
                                 {
                                     Type = ReferenceType.SecurityScheme,
                                     Id = "Bearer"
                                 }
-                            },
+                        },
                             new string[] {}
                     }
-                });
+    });
 });
 builder.Services.AddHttpContextAccessor();
 
@@ -50,11 +78,24 @@ builder.Services.AddDbContext<XContext>(opt =>
 {
     opt.UseSqlServer(builder.Configuration.GetConnectionString("XYönetim"));
 });
+
+
 // repository registiration
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-//automapper
 
+
+//UnitOfWork Registiration
+builder.Services.AddScoped<IUWork, UWork>();
+
+
+//Business Service Registiration
+builder.Services.AddScoped<IAccountService, AccountService>();
+//automapper
 builder.Services.AddAutoMapper(typeof(DomainToDtoModel), typeof(ViewModelToDomain));
+
+
+//FluentValidation Ýstekte gönderilen modele ait property'lerin istenen formatý destekleyip desteklemediðini anlamamýzý saðlar.
+builder.Services.AddValidatorsFromAssemblyContaining(typeof(LoginValidator));
 
 // JWT kimlik doðrulama servisini ekleme
 builder.Services.AddAuthentication(opt =>
@@ -86,6 +127,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

@@ -10,7 +10,7 @@ using X.Yönetim.Domain.Services.Abstraction;
 
 namespace X.Yönetim.Domain.Services.Implementation
 {
-    public class LoggedUserService:ILoggedService
+    public class LoggedUserService : ILoggedService
     {
         private readonly IHttpContextAccessor _httpContextAccessor;
         public LoggedUserService(IHttpContextAccessor httpContextAccessor)
@@ -32,4 +32,5 @@ namespace X.Yönetim.Domain.Services.Implementation
         {
             return _httpContextAccessor?.HttpContext?.User.Claims.FirstOrDefault(x => x.Type == claimType)?.Value;
         }
+    }
 }

@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using X.Yönetim.Application.Models.RequestModels;
+using X.Yönetim.Application.Models.Dtos.Accounts;
+using X.Yönetim.Application.Models.RequestModels.Accounts;
 using X.Yönetim.Application.Wrapper;
 
 namespace X.Yönetim.Application.Services.Abstraction
 {
-    public class IAccountService
+    public interface IAccountService
     {
 
-        Task<Result<int>> Register(RegisterVM registerVM);
+        Task<Result<bool>> Register(RegisterVM registerVM);
+        Task<Result<TokenDto>> Login(LoginVM loginVM);
+        Task<Result<int>> UpdateUser(UpdateUserVM updateUserVM);
     }
 }

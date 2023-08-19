@@ -9,16 +9,19 @@
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.7.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
+    <PackageReference Include="MrAdvice" Version="2.12.2" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.21.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\X.Yönetim.Domain\X.Yönetim.Domain.csproj" />
+    <ProjectReference Include="..\XYönetim.Utils\XYönetim.Utils.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\Dtos\" />
     <Folder Include="Services\Abstraction\" />
-    <Folder Include="Services\Implementation\" />
   </ItemGroup>
 
 </Project>

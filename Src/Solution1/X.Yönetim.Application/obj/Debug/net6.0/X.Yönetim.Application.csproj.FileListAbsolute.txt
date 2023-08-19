@@ -13,3 +13,5 @@ C:\Users\agir_\OneDrive\Masaüstü\ahlatci22\proje\Yonetim_Projesi\Src\Solution1
 C:\Users\agir_\OneDrive\Masaüstü\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Application\bin\Debug\net6.0\X.Yönetim.Domain.dll
 C:\Users\agir_\OneDrive\Masaüstü\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Application\bin\Debug\net6.0\X.Yönetim.Domain.pdb
 C:\Users\agir_\OneDrive\Masaüstü\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Application\obj\Debug\net6.0\X.Yönetim.Application.csproj.CopyComplete
+C:\Users\agir_\OneDrive\Masaüstü\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Application\bin\Debug\net6.0\XYönetim.Utils.dll
+C:\Users\agir_\OneDrive\Masaüstü\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Application\bin\Debug\net6.0\XYönetim.Utils.pdb

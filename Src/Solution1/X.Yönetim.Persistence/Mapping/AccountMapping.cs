@@ -13,7 +13,7 @@ namespace X.Yönetim.Persistence.Mapping
     {
         public override void ConfigureDerivedEntityMapping(EntityTypeBuilder<Account> builder)
         {
-            builder.Property(x => x.PersonID)
+            builder.Property(x => x.UserId)
                .HasColumnName("PERSON_ID")
                .HasColumnOrder(2);
 
@@ -44,9 +44,9 @@ namespace X.Yönetim.Persistence.Mapping
             
             
             //Navigation property
-            builder.HasOne(x => x.Person)
+            builder.HasOne(x => x.User)
                 .WithOne(x=>x.Account)
-                .HasForeignKey<Account>(x => x.PersonID) 
+                .HasForeignKey<Account>(x => x.UserId) 
                 .HasConstraintName("ACCOUNT_PERSON_PERSON_ID");
 
             builder.ToTable("ACCOUNTS");
