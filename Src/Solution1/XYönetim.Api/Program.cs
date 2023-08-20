@@ -12,6 +12,7 @@ using X.Yönetim.Application.AutoMapper;
 using X.Yönetim.Application.Services.Abstraction;
 using X.Yönetim.Application.Services.Implementation;
 using X.Yönetim.Application.Validators.Accounts;
+using X.Yönetim.Application.Validators.Budgets;
 using X.Yönetim.Domain.Repositories;
 using X.Yönetim.Domain.UWork;
 using X.Yönetim.Persistence.Context;
@@ -90,6 +91,11 @@ builder.Services.AddScoped<IUWork, UWork>();
 
 //Business Service Registiration
 builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<IBudgetService, BudgetService>();
+//FluentValidation Ýstekte gönderilen modele ait property'lerin istenen formatý destekleyip desteklemediðini anlamamýzý saðlar.
+builder.Services.AddValidatorsFromAssemblyContaining(typeof(CreateBudgetValidator));
+
+
 //automapper
 builder.Services.AddAutoMapper(typeof(DomainToDtoModel), typeof(ViewModelToDomain));
 

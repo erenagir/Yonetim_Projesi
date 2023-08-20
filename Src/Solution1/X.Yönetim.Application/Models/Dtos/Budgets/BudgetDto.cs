@@ -3,20 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using X.Yönetim.Domain.Common;
 
-namespace X.Yönetim.Domain.Entities
+namespace X.Yönetim.Application.Models.Dtos.Budgets
 {
-    public class Budget :AudiTableEntity
+    public class BudgetDto
     {
-        public int UserId { get; set; }
+        public int Id { get; set; }
+        public int PersonId { get; set; }
         public string Name { get; set; }
         public decimal Amount { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public User User { get; set; }
 
-        public ICollection<Income> Incomes { get; set; }
-        public ICollection<Expense> Expenses { get; set; }
     }
 }

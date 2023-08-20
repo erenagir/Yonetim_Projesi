@@ -20,8 +20,4 @@
     <ProjectReference Include="..\XYönetim.Utils\XYönetim.Utils.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Services\Abstraction\" />
-  </ItemGroup>
-
 </Project>

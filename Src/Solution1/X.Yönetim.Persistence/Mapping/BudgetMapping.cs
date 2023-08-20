@@ -13,7 +13,7 @@ namespace X.Yönetim.Persistence.Mapping
     {
         public override void ConfigureDerivedEntityMapping(EntityTypeBuilder<Budget> builder)
         {
-            builder.Property(x => x.PersonId)
+            builder.Property(x => x.UserId)
                  .HasColumnName("PERSONID")
                  .HasColumnOrder(2);
             
@@ -41,9 +41,9 @@ namespace X.Yönetim.Persistence.Mapping
                 .HasColumnOrder (6)
                 .IsRequired();
 
-            builder.HasOne(x => x.Person)
+            builder.HasOne(x => x.User)
             .WithMany(x => x.Budgets)
-            .HasForeignKey(x => x.PersonId)
+            .HasForeignKey(x => x.UserId)
             .OnDelete(DeleteBehavior.NoAction);
             builder.ToTable("BUDGETS");
         }

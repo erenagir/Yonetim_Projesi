@@ -62,7 +62,7 @@ namespace X.Yönetim.Application.Services.Implementation
                 Token = tokenString,
                 ExpireDate = expireDate
             };
-
+            _uWork.Dispose();
             return result;
         }
 
@@ -104,7 +104,7 @@ namespace X.Yönetim.Application.Services.Implementation
             _uWork.GetRepository<User>().Add(userEntity);
             _uWork.GetRepository<Account>().Add(accountEntity);
             result.Data =await _uWork.CommitAsync();
-
+            _uWork.Dispose();
             return result;
         }
         
@@ -125,6 +125,7 @@ namespace X.Yönetim.Application.Services.Implementation
             _uWork.GetRepository<User>().Update(existsUser);
            await _uWork.CommitAsync();
             result.Data = existsUser.Id;
+            _uWork.Dispose();
             return result;
         }
        
