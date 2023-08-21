@@ -113,3 +113,4 @@ C:\Users\agir_\OneDrive\Masaüstü\ahlatci22\proje\Yonetim_Projesi\Src\Solution1
 C:\Users\agir_\OneDrive\Masaüstü\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\XYönetim.Api\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\agir_\OneDrive\Masaüstü\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\XYönetim.Api\bin\Debug\net6.0\XYönetim.Utils.dll
 C:\Users\agir_\OneDrive\Masaüstü\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\XYönetim.Api\bin\Debug\net6.0\XYönetim.Utils.pdb
+C:\Users\agir_\OneDrive\Masaüstü\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\XYönetim.Api\bin\Debug\net6.0\XYönetim.Api.staticwebassets.runtime.json

@@ -1,11 +1,88 @@
 {
   "Version": 1,
-  "Hash": "R68i3LPAUgSqu2lx6SuvzC5SUh77baDtpztxVTFI+aU=",
+  "Hash": "Qw6cP9o3rlG4yu26vzJ2AlVpCsvn4IQFL1nhF1TexbA=",
   "Source": "XYönetim.Api",
   "BasePath": "_content/XYönetim.Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "XYönetim.Api\\wwwroot",
+      "Source": "XYönetim.Api",
+      "ContentRoot": "C:\\Users\\agir_\\OneDrive\\Masaüstü\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\XYönetim.Api\\wwwroot\\",
+      "BasePath": "_content/XYönetim.Api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\agir_\\OneDrive\\Masaüstü\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\XYönetim.Api\\wwwroot\\images\\User-images\\21_8_2023_3_24_1_404.png",
+      "SourceId": "XYönetim.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\agir_\\OneDrive\\Masaüstü\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\XYönetim.Api\\wwwroot\\",
+      "BasePath": "_content/XYönetim.Api",
+      "RelativePath": "images/User-images/21_8_2023_3_24_1_404.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\User-images\\21_8_2023_3_24_1_404.png"
+    },
+    {
+      "Identity": "C:\\Users\\agir_\\OneDrive\\Masaüstü\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\XYönetim.Api\\wwwroot\\images\\User-images\\21_8_2023_3_27_16_727.png",
+      "SourceId": "XYönetim.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\agir_\\OneDrive\\Masaüstü\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\XYönetim.Api\\wwwroot\\",
+      "BasePath": "_content/XYönetim.Api",
+      "RelativePath": "images/User-images/21_8_2023_3_27_16_727.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\User-images\\21_8_2023_3_27_16_727.png"
+    },
+    {
+      "Identity": "C:\\Users\\agir_\\OneDrive\\Masaüstü\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\XYönetim.Api\\wwwroot\\images\\User-images\\21_8_2023_3_27_41_149.png",
+      "SourceId": "XYönetim.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\agir_\\OneDrive\\Masaüstü\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\XYönetim.Api\\wwwroot\\",
+      "BasePath": "_content/XYönetim.Api",
+      "RelativePath": "images/User-images/21_8_2023_3_27_41_149.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\User-images\\21_8_2023_3_27_41_149.png"
+    },
+    {
+      "Identity": "C:\\Users\\agir_\\OneDrive\\Masaüstü\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\XYönetim.Api\\wwwroot\\images\\User-images\\21_8_2023_3_30_35_623.png",
+      "SourceId": "XYönetim.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\agir_\\OneDrive\\Masaüstü\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\XYönetim.Api\\wwwroot\\",
+      "BasePath": "_content/XYönetim.Api",
+      "RelativePath": "images/User-images/21_8_2023_3_30_35_623.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\User-images\\21_8_2023_3_30_35_623.png"
+    }
+  ]
 }

@@ -63,9 +63,9 @@
               "target": "Package",
               "version": "[11.7.1, )"
             },
-            "Microsoft.Extensions.Configuration.Abstractions": {
+            "Microsoft.AspNetCore.Hosting": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[2.1.1, )"
             },
             "MrAdvice": {
               "target": "Package",

@@ -74,6 +74,7 @@ builder.Services.AddSwaggerGen(c =>
 });
 builder.Services.AddHttpContextAccessor();
 
+
 //dbContext registiration
 builder.Services.AddDbContext<XContext>(opt =>
 {
@@ -94,6 +95,7 @@ builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<IBudgetService, BudgetService>();
 builder.Services.AddScoped<IExpenseService, ExpenseService>();
 builder.Services.AddScoped<IIncomeService, IncomeService>();
+builder.Services.AddScoped<IUserImageService, UserImageService>();
 
 
 //FluentValidation Ýstekte gönderilen modele ait property'lerin istenen formatý destekleyip desteklemediðini anlamamýzý saðlar.
@@ -143,5 +145,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+//Kalýcý olarak saklanacak dosyalar için kayýt yeri ayarlanýyor.
+app.UseStaticFiles();
 
 app.Run();
