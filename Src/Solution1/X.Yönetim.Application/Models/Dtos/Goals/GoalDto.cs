@@ -16,6 +16,6 @@ namespace X.Yönetim.Application.Models.Dtos.Goals
         public DateTime TargetDate { get; set; }
         public string Description { get; set; }
 
-        public User User { get; set; }
+       
     }
 }

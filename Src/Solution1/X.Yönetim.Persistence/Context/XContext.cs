@@ -7,15 +7,19 @@ using System.Text;
 using System.Threading.Tasks;
 using X.Yönetim.Domain.Common;
 using X.Yönetim.Domain.Entities;
+using X.Yönetim.Domain.Services.Abstraction;
+using X.Yönetim.Domain.Services.Implementation;
 using X.Yönetim.Persistence.Mapping;
 
 namespace X.Yönetim.Persistence.Context
 {
     public class XContext : DbContext
     {
-        public XContext(DbContextOptions<XContext> options) : base(options)
-        {
+        private readonly ILoggedUserService _loggedUserService;
 
+        public XContext(DbContextOptions<XContext> options, ILoggedUserService loggedUserService) : base(options)
+        {
+            _loggedUserService = loggedUserService;
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -63,12 +67,12 @@ namespace X.Yönetim.Persistence.Context
                         //update
                         case EntityState.Modified:
                             auditableEntity.ModifiedDate = DateTime.Now;
-                            auditableEntity.ModifiedBy = "admin";
+                            auditableEntity.ModifiedBy = _loggedUserService.Username ?? "admin";
                             break;
                         //insert
                         case EntityState.Added:
                             auditableEntity.CreateDate = DateTime.Now;
-                            auditableEntity.CreatedBy = "admin";
+                            auditableEntity.CreatedBy = _loggedUserService.Username ?? "admin";
                             break;
                         //delete
                         //case EntityState.Deleted:

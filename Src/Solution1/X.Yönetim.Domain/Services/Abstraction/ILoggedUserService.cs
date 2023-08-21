@@ -7,7 +7,7 @@ using X.Yönetim.Domain.Entities;
 
 namespace X.Yönetim.Domain.Services.Abstraction
 {
-    public class ILoggedService
+    public interface ILoggedUserService
     {
         int? UserId { get; }
         string Username { get; }

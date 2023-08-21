@@ -10,7 +10,7 @@ using X.Yönetim.Domain.Services.Abstraction;
 
 namespace X.Yönetim.Domain.Services.Implementation
 {
-    public class LoggedUserService : ILoggedService
+    public class LoggedUserService : ILoggedUserService
     {
         private readonly IHttpContextAccessor _httpContextAccessor;
         public LoggedUserService(IHttpContextAccessor httpContextAccessor)
