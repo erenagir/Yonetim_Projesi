@@ -9,14 +9,14 @@ namespace X.Yönetim.Domain.Entities
 {
     public class Expense:AudiTableEntity
     {
-        public int PersonId { get; set; }
+        public int UserId { get; set; }
         public int BudgetId { get; set; }
         public decimal Amount { get; set; }
         public DateTime TransactionDate { get; set; }
         public string Description { get; set; }
 
         //navigation property
-        public User Person { get; set; }
+        public User User { get; set; }
         public Budget Budget { get; set; }
 
     }

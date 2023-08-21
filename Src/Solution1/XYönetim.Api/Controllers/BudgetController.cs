@@ -56,8 +56,8 @@ namespace XYönetim.Api.Controllers
         [HttpDelete("delete/{id:int}")]
         public async Task<ActionResult<Result<int>>> DeleteBudget(int id)
         {
-            var categoryId = await _budgetService.DeleteBudget(new DeleteBudgetVM { Id = id });
-            return Ok(categoryId);
+            var result   = await _budgetService.DeleteBudget(new DeleteBudgetVM { Id = id });
+            return Ok(result);
         }
     }
 }

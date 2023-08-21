@@ -109,7 +109,7 @@ namespace X.Yönetim.Application.Services.Implementation
             var existsBudget = await _uWork.GetRepository<Budget>().GetByIdAsync(deleteBudgetVM);
             if (existsBudget is null)
             {
-                throw new NotFoundException($"{deleteBudgetVM.Id} numaralı şehir bulunamadı.");
+                throw new NotFoundException($"{deleteBudgetVM.Id} numaralı bütçe bulunamadı.");
             }
 
             _uWork.GetRepository<Budget>().Delete(existsBudget);
@@ -131,6 +131,11 @@ namespace X.Yönetim.Application.Services.Implementation
         public async Task<Result<int>> UpdateBudget(UpdateBudgetVM updateBudgetVM)
         {
             var result = new Result<int>();
+            var existsUser = await _uWork.GetRepository<User>().AnyAsync(x => x.Id == updateBudgetVM.UserId);
+            if (!existsUser)
+            {
+                throw new NotFoundException($"{updateBudgetVM.UserId} numaralı kullanıcı bunamadı");
+            }
 
             var budgetIdExists = await _uWork.GetRepository<Budget>().AnyAsync(x => x.Id == updateBudgetVM.Id);
             if (!budgetIdExists)

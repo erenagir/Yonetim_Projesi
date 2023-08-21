@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using X.Yönetim.Application.Models.RequestModels.Accounts;
 using X.Yönetim.Application.Models.RequestModels.Budgets;
+using X.Yönetim.Application.Models.RequestModels.Expenses;
 using X.Yönetim.Domain.Entities;
 
 namespace X.Yönetim.Application.AutoMapper
@@ -24,6 +25,9 @@ namespace X.Yönetim.Application.AutoMapper
             CreateMap<CreateBudgetVM, Budget>();
             CreateMap<UpdateBudgetVM, Budget>();
 
+
+            CreateMap<CreateExpenseVM, Expense>();
+            CreateMap<UpdateExpenseVM, Expense>();
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using X.Yönetim.Application.Models.Dtos.Budgets;
+using X.Yönetim.Application.Models.Dtos.Expenses;
 using X.Yönetim.Domain.Entities;
 
 namespace X.Yönetim.Application.AutoMapper
@@ -15,6 +16,7 @@ namespace X.Yönetim.Application.AutoMapper
         public DomainToDtoModel()
         {
            CreateMap<Budget, BudgetDto>();
+           CreateMap<Expense, ExpenseDto>();
         }
     }
 }

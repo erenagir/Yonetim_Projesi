@@ -8,13 +8,13 @@ using X.Yönetim.Domain.Common;
 namespace X.Yönetim.Domain.Entities
 {
     public class Goal:AudiTableEntity
-    {   public int personId { get; set; }
+    {   public int UserId { get; set; }
         public string Name { get; set; }
         public decimal TargetAmount { get; set; }
         public DateTime TargetDate { get; set; }
         public string Description { get; set; }
 
-        public User Person { get; set; }
+        public User User { get; set; }
 
     }
 }

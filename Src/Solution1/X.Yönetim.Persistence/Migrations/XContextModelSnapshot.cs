@@ -75,7 +75,7 @@ namespace X.Yönetim.Persistence.Migrations
                         .HasColumnName("PASSWORD")
                         .HasColumnOrder(4);
 
-                    b.Property<int>("PersonID")
+                    b.Property<int>("UserId")
                         .HasColumnType("int")
                         .HasColumnName("PERSON_ID")
                         .HasColumnOrder(2);
@@ -88,7 +88,7 @@ namespace X.Yönetim.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("PersonID")
+                    b.HasIndex("UserId")
                         .IsUnique();
 
                     b.ToTable("ACCOUNTS", (string)null);
@@ -147,19 +147,19 @@ namespace X.Yönetim.Persistence.Migrations
                         .HasColumnName("NAME")
                         .HasColumnOrder(3);
 
-                    b.Property<int>("PersonId")
-                        .HasColumnType("int")
-                        .HasColumnName("PERSONID")
-                        .HasColumnOrder(2);
-
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("date")
                         .HasColumnName("STARTDATE")
                         .HasColumnOrder(5);
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("int")
+                        .HasColumnName("PERSONID")
+                        .HasColumnOrder(2);
+
                     b.HasKey("Id");
 
-                    b.HasIndex("PersonId");
+                    b.HasIndex("UserId");
 
                     b.ToTable("BUDGETS", (string)null);
                 });
@@ -177,10 +177,12 @@ namespace X.Yönetim.Persistence.Migrations
                     b.Property<decimal>("Amount")
                         .HasColumnType("decimal(18, 2)")
                         .HasColumnName("AMOUNT")
-                        .HasColumnOrder(3);
+                        .HasColumnOrder(4);
 
                     b.Property<int>("BudgetId")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("BUDGETID")
+                        .HasColumnOrder(3);
 
                     b.Property<DateTime?>("CreateDate")
                         .HasColumnType("datetime2")
@@ -196,7 +198,7 @@ namespace X.Yönetim.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(100)")
                         .HasColumnName("DESCRİPTİON")
-                        .HasColumnOrder(5);
+                        .HasColumnOrder(6);
 
                     b.Property<bool?>("IsDeleted")
                         .ValueGeneratedOnAdd()
@@ -215,21 +217,21 @@ namespace X.Yönetim.Persistence.Migrations
                         .HasColumnName("MODIFIED_DATE")
                         .HasColumnOrder(28);
 
-                    b.Property<int>("PersonId")
-                        .HasColumnType("int")
-                        .HasColumnName("PERSONID")
-                        .HasColumnOrder(2);
-
                     b.Property<DateTime>("TransactionDate")
                         .HasColumnType("date")
                         .HasColumnName("TRANSACTİON_DATE")
-                        .HasColumnOrder(4);
+                        .HasColumnOrder(5);
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int")
+                        .HasColumnName("PERSONID")
+                        .HasColumnOrder(2);
 
                     b.HasKey("Id");
 
                     b.HasIndex("BudgetId");
 
-                    b.HasIndex("PersonId");
+                    b.HasIndex("UserId");
 
                     b.ToTable("EXPENSES", (string)null);
                 });
@@ -499,25 +501,25 @@ namespace X.Yönetim.Persistence.Migrations
 
             modelBuilder.Entity("X.Yönetim.Domain.Entities.Account", b =>
                 {
-                    b.HasOne("X.Yönetim.Domain.Entities.User", "Person")
+                    b.HasOne("X.Yönetim.Domain.Entities.User", "User")
                         .WithOne("Account")
-                        .HasForeignKey("X.Yönetim.Domain.Entities.Account", "PersonID")
+                        .HasForeignKey("X.Yönetim.Domain.Entities.Account", "UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("ACCOUNT_PERSON_PERSON_ID");
 
-                    b.Navigation("Person");
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("X.Yönetim.Domain.Entities.Budget", b =>
                 {
-                    b.HasOne("X.Yönetim.Domain.Entities.User", "Person")
+                    b.HasOne("X.Yönetim.Domain.Entities.User", "User")
                         .WithMany("Budgets")
-                        .HasForeignKey("PersonId")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
-                    b.Navigation("Person");
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("X.Yönetim.Domain.Entities.Expense", b =>
@@ -530,7 +532,7 @@ namespace X.Yönetim.Persistence.Migrations
 
                     b.HasOne("X.Yönetim.Domain.Entities.User", "Person")
                         .WithMany("Expenses")
-                        .HasForeignKey("PersonId")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 

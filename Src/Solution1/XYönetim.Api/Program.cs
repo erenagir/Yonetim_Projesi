@@ -92,6 +92,9 @@ builder.Services.AddScoped<IUWork, UWork>();
 //Business Service Registiration
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<IBudgetService, BudgetService>();
+builder.Services.AddScoped<IExpenseService, ExpenseService>();
+
+
 //FluentValidation Ýstekte gönderilen modele ait property'lerin istenen formatý destekleyip desteklemediðini anlamamýzý saðlar.
 builder.Services.AddValidatorsFromAssemblyContaining(typeof(CreateBudgetValidator));
 
