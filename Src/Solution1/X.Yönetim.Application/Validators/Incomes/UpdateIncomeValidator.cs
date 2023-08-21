@@ -4,19 +4,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using X.Yönetim.Application.Models.RequestModels.Budgets;
-using X.Yönetim.Application.Models.RequestModels.Expenses;
+using X.Yönetim.Application.Models.RequestModels.Incomes;
 
-namespace X.Yönetim.Application.Validators.Expenses
+namespace X.Yönetim.Application.Validators.Incomes
 {
-    public class CreateExpenseValidator:AbstractValidator<CreateExpenseVM>
+    public class UpdateIncomeValidator:AbstractValidator<UpdateIncomeVM>
     {
-        public CreateExpenseValidator()
+        public UpdateIncomeValidator()
         {
+            RuleFor(x => x.Id)
+               .NotEmpty().WithMessage("bütçe kimlik numarası boş olamaz.")
+               .GreaterThan(0).WithMessage("bütçe kimlik numarası sıfırdan büyük bir sayı olmalıdır.");
+
             RuleFor(x => x.UserId)
-                .NotEmpty().WithMessage("Bütçe ait kullanıcı bilgisi boş olamaz.")
-                .GreaterThan(0).WithMessage("kullanıcı bilgisi sıfırdan büyük bir sayı olmalıdır.");
-            
+                 .NotEmpty().WithMessage("Bütçe ait kullanıcı bilgisi boş olamaz.")
+                 .GreaterThan(0).WithMessage("kullanıcı bilgisi sıfırdan büyük bir sayı olmalıdır.");
+
             RuleFor(x => x.BudgetId)
               .NotEmpty().WithMessage("Bütçe ait kullanıcı bilgisi boş olamaz.")
               .GreaterThan(0).WithMessage("kullanıcı bilgisi sıfırdan büyük bir sayı olmalıdır.");
@@ -30,10 +33,6 @@ namespace X.Yönetim.Application.Validators.Expenses
 
             RuleFor(x => x.TransactionDate)
                 .NotEmpty().WithMessage("işlem tarih bilgisi boş olamaz.");
-
-          
-
-
         }
     }
 }

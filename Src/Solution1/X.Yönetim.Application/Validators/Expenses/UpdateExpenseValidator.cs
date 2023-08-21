@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using X.Yönetim.Application.Models.RequestModels.Budgets;
 using X.Yönetim.Application.Models.RequestModels.Expenses;
 
-namespace X.Yönetim.Application.Validators.Budgets
+namespace X.Yönetim.Application.Validators.Expenses
 {
     public class UpdateExpenseValidator : AbstractValidator<UpdateExpenseVM>
     {

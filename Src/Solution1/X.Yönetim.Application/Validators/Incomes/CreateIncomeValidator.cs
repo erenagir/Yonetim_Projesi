@@ -1,17 +1,11 @@
 ﻿using FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using X.Yönetim.Application.Models.RequestModels.Budgets;
-using X.Yönetim.Application.Models.RequestModels.Expenses;
+using X.Yönetim.Application.Models.RequestModels.Incomes;
 
-namespace X.Yönetim.Application.Validators.Expenses
+namespace X.Yönetim.Application.Validators.Incomes
 {
-    public class CreateExpenseValidator:AbstractValidator<CreateExpenseVM>
+    public class CreateIncomeValidator : AbstractValidator<CreateIncomeVM>
     {
-        public CreateExpenseValidator()
+        public CreateIncomeValidator()
         {
             RuleFor(x => x.UserId)
                 .NotEmpty().WithMessage("Bütçe ait kullanıcı bilgisi boş olamaz.")

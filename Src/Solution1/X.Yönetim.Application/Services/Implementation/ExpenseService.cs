@@ -14,6 +14,7 @@ using X.Yönetim.Application.Models.RequestModels.Budgets;
 using X.Yönetim.Application.Models.RequestModels.Expenses;
 using X.Yönetim.Application.Services.Abstraction;
 using X.Yönetim.Application.Validators.Budgets;
+using X.Yönetim.Application.Validators.Expenses;
 using X.Yönetim.Application.Wrapper;
 using X.Yönetim.Domain.Entities;
 using X.Yönetim.Domain.UWork;
@@ -55,9 +56,6 @@ namespace X.Yönetim.Application.Services.Implementation
         {
             var result = new Result<ExpenseDto>();
 
-         
-            
-
             var expenseEntity = await _uWork.GetRepository<Expense>().GetByIdAsync(getExpenseByIdVM.Id);
             if (expenseEntity is null)
             {
@@ -98,7 +96,7 @@ namespace X.Yönetim.Application.Services.Implementation
             _uWork.Dispose();
             return result;
         }
-        
+
         /// <summary>
         /// expense siler
         /// </summary>
@@ -122,7 +120,7 @@ namespace X.Yönetim.Application.Services.Implementation
             _uWork.Dispose();
             return result;
         }
-        
+
         /// <summary>
         /// expense günceller
         /// </summary>
@@ -151,7 +149,7 @@ namespace X.Yönetim.Application.Services.Implementation
             }
 
 
-            
+
 
             _mapper.Map(updateExpenseVM, expenseExistsEntity);
 
