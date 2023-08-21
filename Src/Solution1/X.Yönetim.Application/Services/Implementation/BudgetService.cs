@@ -55,11 +55,11 @@ namespace X.Yönetim.Application.Services.Implementation
         {
             var result = new Result<BudgetDto>();
 
-            //var categoryExists = await _context.Categories.AnyAsync(x=>x.Id == getCategoryByIdVM.Id);
-            var categoryExists = await _uWork.GetRepository<Budget>().AnyAsync(x => x.Id == GetBudgetByIdVM.Id);
-            if (!categoryExists)
+           
+            var budgetExists = await _uWork.GetRepository<Budget>().AnyAsync(x => x.Id == GetBudgetByIdVM.Id);
+            if (!budgetExists)
             {
-                throw new NotFoundException($"{GetBudgetByIdVM.Id} numaralı kategori bulunamadı.");
+                throw new NotFoundException($"{GetBudgetByIdVM.Id} numaralı bütçe bulunamadı.");
             }
 
             var budgetEntity = await _uWork.GetRepository<Budget>().GetByIdAsync(GetBudgetByIdVM.Id);

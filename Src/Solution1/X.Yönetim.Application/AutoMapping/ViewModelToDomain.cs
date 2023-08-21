@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using X.Yönetim.Application.Models.RequestModels.Accounts;
 using X.Yönetim.Application.Models.RequestModels.Budgets;
 using X.Yönetim.Application.Models.RequestModels.Expenses;
+using X.Yönetim.Application.Models.RequestModels.Goals;
 using X.Yönetim.Application.Models.RequestModels.Incomes;
 using X.Yönetim.Application.Models.RequestModels.UserImages;
 using X.Yönetim.Domain.Entities;
@@ -35,6 +36,9 @@ namespace X.Yönetim.Application.AutoMapper
             CreateMap<UpdateIncomeVM,Income>();
 
             CreateMap<CreateUserImageVM, UserImage>();
+
+            CreateMap<CreateGoalVM, Goal>();
+            CreateMap<UpdateGoalVM, Goal>();
         }
     }
 }

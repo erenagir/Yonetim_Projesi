@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using X.Yönetim.Domain.Common;
+using X.Yönetim.Domain.Entities;
 
-namespace X.Yönetim.Domain.Entities
+namespace X.Yönetim.Application.Models.Dtos.Goals
 {
-    public class Goal : AudiTableEntity
+    public class GoalDto
     {
+        public int Id { get; set; }
         public int UserId { get; set; }
         public string Name { get; set; }
         public decimal TargetAmount { get; set; }
@@ -16,6 +17,5 @@ namespace X.Yönetim.Domain.Entities
         public string Description { get; set; }
 
         public User User { get; set; }
-
     }
 }

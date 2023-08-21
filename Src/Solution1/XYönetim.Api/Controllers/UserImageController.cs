@@ -35,12 +35,6 @@ namespace XYönetim.Api.Controllers
             return Ok(result);
         }
 
-        //[HttpGet("get/{id:int}")]
-        //public async Task<ActionResult<Result<ExpenseDto>>> GetIncomeById(int id)
-        //{
-        //    var result = await _incomeService.GetIncomeById(new GetIncomeByIdVM { Id=id});
-        //    return Ok(result);
-        //}
 
         [HttpPost("create")]
         public async Task<ActionResult<Result<int>>> CreateUserImage([FromForm]CreateUserImageVM createUserImageVM)
