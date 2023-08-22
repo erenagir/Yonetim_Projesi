@@ -16,6 +16,7 @@ using X.Yönetim.Application.Services.Abstraction;
 using X.Yönetim.Application.Validators.Goals;
 using X.Yönetim.Application.Wrapper;
 using X.Yönetim.Domain.Entities;
+using X.Yönetim.Domain.Services.Abstraction;
 using X.Yönetim.Domain.UWork;
 
 namespace X.Yönetim.Application.Services.Implementation
@@ -24,15 +25,17 @@ namespace X.Yönetim.Application.Services.Implementation
     {
         private readonly IUWork _uWork;
         private readonly IMapper _mapper;
-       public GoalService(IMapper mapper, IUWork uWork)
+        private readonly ILoggedUserService _loggedUserService;
+        public GoalService(IMapper mapper, IUWork uWork, ILoggedUserService loggedUserService)
         {
             _mapper = mapper;
             _uWork = uWork;
+            _loggedUserService = loggedUserService;
         }
         public async Task<Result<List<GoalDto>>> GetAllGoals()
         {
             var result = new Result<List<GoalDto>>();
-            var goalEntites = await _uWork.GetRepository<Goal>().GetAllAsync();
+            var goalEntites = await _uWork.GetRepository<Goal>().GetByFilterAsync(x => x.UserId == _loggedUserService.UserId);
             var goalDtos = goalEntites.ProjectTo<GoalDto>(_mapper.ConfigurationProvider).ToList();
             result.Data = goalDtos;
             _uWork.Dispose();
@@ -45,15 +48,14 @@ namespace X.Yönetim.Application.Services.Implementation
             var result = new Result<GoalDto>();
 
 
-            var GoalExists = await _uWork.GetRepository<Goal>().AnyAsync(x => x.Id == getGoalByIdVM.Id);
-            if (!GoalExists)
+           
+
+            var goalEntity = await _uWork.GetRepository<Goal>().GetSingleByFilterAsync(X => (X.UserId == _loggedUserService.UserId) && (X.Id == getGoalByIdVM.Id));
+            if (goalEntity is null)
             {
                 throw new NotFoundException($"{getGoalByIdVM.Id} numaralı hedef bulunamadı.");
             }
 
-            var goalEntity = await _uWork.GetRepository<Goal>().GetByIdAsync(getGoalByIdVM.Id);
-
-            var goal = _mapper.Map<Goal, GoalDto>(goalEntity);
             var goalDto = _mapper.Map<Goal, GoalDto>(goalEntity);
 
             result.Data = goalDto;

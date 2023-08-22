@@ -20,7 +20,8 @@ namespace X.Yönetim.Application.AutoMapper
         {
             //account-User işlemleri
             CreateMap<RegisterVM, User>();
-            CreateMap<RegisterVM, Account>();
+            CreateMap<RegisterVM, Account>()
+                .ForMember(x=>x.Role,y=>y.MapFrom(e=>Roles.Admin));
 
             CreateMap<UpdateUserVM, User>();
                

@@ -11,7 +11,7 @@ namespace X.Yönetim.Application.Services.Abstraction
 {
     public interface IAccountService
     {
-
+        Task<Result<UserDto>> GetUser(GetUserbyIdVM getUserbyIdVM);
         Task<Result<bool>> Register(RegisterVM registerVM);
         Task<Result<TokenDto>> Login(LoginVM loginVM);
         Task<Result<int>> UpdateUser(UpdateUserVM updateUserVM);

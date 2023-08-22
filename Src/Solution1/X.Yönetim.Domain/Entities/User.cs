@@ -19,7 +19,7 @@ namespace X.Yönetim.Domain.Entities
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
         public Gender Gender { get; set; }
-        public decimal Amount { get; set; }
+        
 
 
         //Navigation Property

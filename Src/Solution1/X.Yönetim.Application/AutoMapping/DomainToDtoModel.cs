@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using X.Yönetim.Application.Models.Dtos;
+using X.Yönetim.Application.Models.Dtos.Accounts;
 using X.Yönetim.Application.Models.Dtos.Budgets;
 using X.Yönetim.Application.Models.Dtos.Expenses;
 using X.Yönetim.Application.Models.Dtos.Goals;
@@ -17,6 +19,7 @@ namespace X.Yönetim.Application.AutoMapper
             CreateMap<Income, IncomeDto>();
             CreateMap<UserImage,UserImageDto>();
             CreateMap<Goal, GoalDto>();
+            CreateMap<User, UserDto>();
         }
     }
 }

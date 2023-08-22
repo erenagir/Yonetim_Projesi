@@ -13,6 +13,7 @@ using X.Yönetim.Application.Services.Abstraction;
 using X.Yönetim.Application.Validators.Budgets;
 using X.Yönetim.Application.Wrapper;
 using X.Yönetim.Domain.Entities;
+using X.Yönetim.Domain.Services.Abstraction;
 using X.Yönetim.Domain.UWork;
 
 namespace X.Yönetim.Application.Services.Implementation
@@ -21,11 +22,13 @@ namespace X.Yönetim.Application.Services.Implementation
     {
         private readonly IUWork _uWork;
         private readonly IMapper _mapper;
+        private readonly ILoggedUserService _loggedUserService;
 
-        public BudgetService(IMapper mapper, IUWork uWork)
+        public BudgetService(IMapper mapper, IUWork uWork, ILoggedUserService loggedUserService)
         {
             _mapper = mapper;
             _uWork = uWork;
+            _loggedUserService = loggedUserService;
         }
 
         /// <summary>
@@ -35,7 +38,7 @@ namespace X.Yönetim.Application.Services.Implementation
         public async Task<Result<List<BudgetDto>>> GetAllBudgets()
         {
             var result = new Result<List<BudgetDto>>();
-            var budgetEntites = await _uWork.GetRepository<Budget>().GetAllAsync();
+            var budgetEntites = await _uWork.GetRepository<Budget>().GetByFilterAsync(x=>x.UserId==_loggedUserService.UserId);
             var BudgetDtos = budgetEntites.ProjectTo<BudgetDto>(_mapper.ConfigurationProvider).ToList();
             result.Data = BudgetDtos;
             _uWork.Dispose();
@@ -55,14 +58,14 @@ namespace X.Yönetim.Application.Services.Implementation
         {
             var result = new Result<BudgetDto>();
 
-           
+
             var budgetExists = await _uWork.GetRepository<Budget>().AnyAsync(x => x.Id == GetBudgetByIdVM.Id);
             if (!budgetExists)
             {
                 throw new NotFoundException($"{GetBudgetByIdVM.Id} numaralı bütçe bulunamadı.");
             }
 
-            var budgetEntity = await _uWork.GetRepository<Budget>().GetByIdAsync(GetBudgetByIdVM.Id);
+            var budgetEntity = await _uWork.GetRepository<Budget>().GetSingleByFilterAsync(X=>(X.UserId==_loggedUserService.UserId) && (X.Id== GetBudgetByIdVM.Id));
 
             var budgetDto = _mapper.Map<Budget, BudgetDto>(budgetEntity);
 

@@ -14,6 +14,7 @@ using X.Yönetim.Application.Wrapper;
 using X.Yönetim.Domain.Entities;
 using X.Yönetim.Domain.UWork;
 using XYönetim.Utils;
+using System.Linq;
 
 namespace X.Yönetim.Application.Services.Implementation
 {
@@ -29,14 +30,29 @@ namespace X.Yönetim.Application.Services.Implementation
             _mapper = mapper;
             _uWork = uWork;
         }
-        
+
+        public async Task<Result<UserDto>> GetUser(GetUserbyIdVM getUserbyIdVM)
+        {
+            var result = new Result<UserDto>();
+
+            var userEntity = await _uWork.GetRepository<User>().GetByIdAsync(getUserbyIdVM.Id);
+
+            if (userEntity is null)
+            {
+                throw new NotFoundException("kullanıcı bulunamadı");
+            }
+            var userDto = _mapper.Map<UserDto>(userEntity);
+            result.Data = userDto;
+            return result;
+        }
+
         /// <summary>
         /// login işlemi için
         /// </summary>
         /// <param name="loginVM"></param>
         /// <returns></returns>
         /// <exception cref="NotFoundException"></exception>
-        [ValidationBehavior(typeof( LoginValidator))]
+        [ValidationBehavior(typeof(LoginValidator))]
         public async Task<Result<TokenDto>> Login(LoginVM loginVM)
         {
             var result = new Result<TokenDto>();
@@ -79,7 +95,7 @@ namespace X.Yönetim.Application.Services.Implementation
             var result = new Result<bool>();
 
             //Aynı kullanıcı adı daha önce girilmiş mi.
-            var usernameExists = await _uWork.GetRepository<Account>().AnyAsync(x=>x.Username.Trim().ToUpper()==registerVM.Surname.Trim().ToUpper());
+            var usernameExists = await _uWork.GetRepository<Account>().AnyAsync(x => x.Username.Trim().ToUpper() == registerVM.Surname.Trim().ToUpper());
             if (usernameExists)
             {
                 throw new AlreadyExistsException($"{registerVM.Username} kullanıcı adı daha önce seçilmiştir. Lütfen farklı bir kullanıcı adı belirleyiniz.");
@@ -104,11 +120,11 @@ namespace X.Yönetim.Application.Services.Implementation
 
             _uWork.GetRepository<User>().Add(userEntity);
             _uWork.GetRepository<Account>().Add(accountEntity);
-            result.Data =await _uWork.CommitAsync();
+            result.Data = await _uWork.CommitAsync();
             _uWork.Dispose();
             return result;
         }
-        
+
         /// <summary>
         /// kullanıcı bilgilerinden bazılarını güncellemek için
         /// </summary>
@@ -118,18 +134,18 @@ namespace X.Yönetim.Application.Services.Implementation
         [ValidationBehavior(typeof(UpdateUserValidator))]
         public async Task<Result<int>> UpdateUser(UpdateUserVM updateUserVM)
         {
-           var result = new Result<int>();
-            var existsUser=await _uWork.GetRepository<User>().GetByIdAsync(updateUserVM.Id);
-           
+            var result = new Result<int>();
+            var existsUser = await _uWork.GetRepository<User>().GetByIdAsync(updateUserVM.Id);
 
-            _mapper.Map(updateUserVM,existsUser);
+
+            _mapper.Map(updateUserVM, existsUser);
             _uWork.GetRepository<User>().Update(existsUser);
-           await _uWork.CommitAsync();
+            await _uWork.CommitAsync();
             result.Data = existsUser.Id;
             _uWork.Dispose();
             return result;
         }
-       
+
         /// <summary>
         /// token oluşturmak için
         /// </summary>
@@ -144,10 +160,10 @@ namespace X.Yönetim.Application.Services.Implementation
 
             var claims = new Claim[]
             {
-                 new Claim(ClaimTypes.Role,account.Role.ToString()),
+                 
                 new Claim(ClaimTypes.Role,account.Role.ToString()),
                 new Claim(ClaimTypes.Name,account.Username),
-                new Claim(ClaimTypes.Email,account.User.Email), //Account entity'sini Customer'a bağlayan navigation property
+                new Claim(ClaimTypes.Email,account.User.Email), //Account entity'sini user'a bağlayan navigation property
                 new Claim(ClaimTypes.Sid,account.UserId.ToString())
 
             };

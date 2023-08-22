@@ -15,6 +15,7 @@ using X.Yönetim.Application.Services.Abstraction;
 using X.Yönetim.Application.Validators.Incomes;
 using X.Yönetim.Application.Wrapper;
 using X.Yönetim.Domain.Entities;
+using X.Yönetim.Domain.Services.Abstraction;
 using X.Yönetim.Domain.UWork;
 
 namespace X.Yönetim.Application.Services.Implementation
@@ -23,11 +24,13 @@ namespace X.Yönetim.Application.Services.Implementation
     {
         private readonly IUWork _uWork;
         private readonly IMapper _mapper;
+        private readonly ILoggedUserService _loggedUserService;
 
-        public IncomeService(IMapper mapper, IUWork uWork)
+        public IncomeService(IMapper mapper, IUWork uWork, ILoggedUserService loggedUserService)
         {
             _mapper = mapper;
             _uWork = uWork;
+            _loggedUserService = loggedUserService;
         }
 
         /// <summary>
@@ -55,7 +58,7 @@ namespace X.Yönetim.Application.Services.Implementation
         {
             var result = new Result<IncomeDto>();
 
-            var incomeEntity = await _uWork.GetRepository<Income>().GetByIdAsync(getIncomeByIdVM.Id);
+            var incomeEntity = await _uWork.GetRepository<Income>().GetSingleByFilterAsync(X => (X.UserId == _loggedUserService.UserId) && (X.Id == getIncomeByIdVM.Id));
             if (incomeEntity is null)
             {
                 throw new NotFoundException($"{getIncomeByIdVM.Id} numaralı Gider bulunamadı.");
@@ -81,14 +84,18 @@ namespace X.Yönetim.Application.Services.Implementation
             {
                 throw new NotFoundException($"{createIncomeVM.UserId} numaralı kullanıcı bunamadı");
             }
-            var existsBudget = await _uWork.GetRepository<Budget>().AnyAsync(x => x.Id == createIncomeVM.BudgetId);
-            if (!existsBudget)
+            var existsBudget = await _uWork.GetRepository<Budget>().GetByIdAsync( createIncomeVM.BudgetId);
+            if (existsBudget is null)
             {
                 throw new NotFoundException($"{createIncomeVM.BudgetId} numaralı Bütçe bunamadı");
             }
             var result = new Result<int>();
             var ıncomeEntity = _mapper.Map<CreateIncomeVM, Income>(createIncomeVM);
+            // geliri bütçeye ekle
+            existsBudget.Amount += createIncomeVM.Amount;
+
             _uWork.GetRepository<Income>().Add(ıncomeEntity);
+            _uWork.GetRepository<Budget>().Update(existsBudget);
             await _uWork.CommitAsync();
 
             result.Data = ıncomeEntity.Id;
@@ -137,22 +144,31 @@ namespace X.Yönetim.Application.Services.Implementation
                 throw new NotFoundException($"{updateIncomeVM.UserId} numaralı kullanıcı bunamadı");
             }
 
-            var budgetIdExists = await _uWork.GetRepository<Budget>().AnyAsync(x => x.Id == updateIncomeVM.BudgetId);
-            if (!budgetIdExists)
-            {
-                throw new NotFoundException($"{updateIncomeVM.BudgetId} numaralı bütçe bulunamadı.");
-            }
+            //var budgetIdExists = await _uWork.GetRepository<Budget>().AnyAsync(x => x.Id == updateIncomeVM.BudgetId);
+            //if (!budgetIdExists)
+            //{
+            //    throw new NotFoundException($"{updateIncomeVM.BudgetId} numaralı bütçe bulunamadı.");
+            //}
             var incomeEntity = await _uWork.GetRepository<Income>().GetSingleByFilterAsync(x => x.Id == updateIncomeVM.Id);
             if (incomeEntity is null)
             {
                 throw new NotFoundException($"{updateIncomeVM.Id} numaralı gelir bulunamadı.");
             }
+            if (updateIncomeVM.BudgetId == incomeEntity.BudgetId)
+            {
+
+                throw new AlreadyExistsException("Bütçe bilgisi değitirilemez");
+            }
 
 
-
+            // bütce miktar bilgisi güncelleme
+            var budgetExists = await _uWork.GetRepository<Budget>().GetByIdAsync(updateIncomeVM.BudgetId);
+            budgetExists.Amount += updateIncomeVM.Amount;
+            budgetExists.Amount -= incomeEntity.Amount;
 
             _mapper.Map(updateIncomeVM, incomeEntity);
-
+            
+            _uWork.GetRepository<Budget>().Update(budgetExists);
             _uWork.GetRepository<Income>().Update(incomeEntity);
             await _uWork.CommitAsync();
             result.Data = incomeEntity.Id;
