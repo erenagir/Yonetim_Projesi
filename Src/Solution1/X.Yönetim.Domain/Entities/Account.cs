@@ -12,6 +12,7 @@ namespace X.Yönetim.Domain.Entities
     {
 
         public int UserId { get; set; }
+        public Roles Role { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
         public DateTime? LastLoginDate { get; set; }
@@ -19,5 +20,10 @@ namespace X.Yönetim.Domain.Entities
         
        public User User { get; set; }
     }
-    
+    public enum Roles
+    {
+        Admin,
+        User,
+    }
+
 }

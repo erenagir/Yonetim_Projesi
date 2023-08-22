@@ -60,7 +60,8 @@ namespace X.Yönetim.Application.Services.Implementation
             result.Data = new TokenDto
             {
                 Token = tokenString,
-                ExpireDate = expireDate
+                ExpireDate = expireDate,
+                Role = existsAccount.Role
             };
             _uWork.Dispose();
             return result;
@@ -143,10 +144,12 @@ namespace X.Yönetim.Application.Services.Implementation
 
             var claims = new Claim[]
             {
-                new Claim(ClaimTypes.Role,account.User.Role.ToString()),
+                 new Claim(ClaimTypes.Role,account.Role.ToString()),
+                new Claim(ClaimTypes.Role,account.Role.ToString()),
                 new Claim(ClaimTypes.Name,account.Username),
                 new Claim(ClaimTypes.Email,account.User.Email), //Account entity'sini Customer'a bağlayan navigation property
                 new Claim(ClaimTypes.Sid,account.UserId.ToString())
+
             };
 
             var tokenHandler = new JwtSecurityTokenHandler();

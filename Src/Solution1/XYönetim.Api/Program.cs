@@ -14,6 +14,8 @@ using X.Yönetim.Application.Services.Implementation;
 using X.Yönetim.Application.Validators.Accounts;
 using X.Yönetim.Application.Validators.Budgets;
 using X.Yönetim.Domain.Repositories;
+using X.Yönetim.Domain.Services.Abstraction;
+using X.Yönetim.Domain.Services.Implementation;
 using X.Yönetim.Domain.UWork;
 using X.Yönetim.Persistence.Context;
 using X.Yönetim.Persistence.Repositories;
@@ -97,6 +99,7 @@ builder.Services.AddScoped<IExpenseService, ExpenseService>();
 builder.Services.AddScoped<IIncomeService, IncomeService>();
 builder.Services.AddScoped<IUserImageService, UserImageService>();
 builder.Services.AddScoped<IGoalService,GoalService>();
+builder.Services.AddScoped<ILoggedUserService,LoggedUserService>();
 
 
 //FluentValidation Ýstekte gönderilen modele ait property'lerin istenen formatý destekleyip desteklemediðini anlamamýzý saðlar.

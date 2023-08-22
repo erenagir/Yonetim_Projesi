@@ -48,11 +48,16 @@ namespace X.Yönetim.Persistence.Mapping
                 .HasColumnName("GENDER")
                 .IsRequired()
                 .HasColumnOrder(9);
-            builder.Property(x=>x.Role)
-                .HasColumnName("ROLE")
-                .HasColumnOrder (10);
-           
-            
+
+            builder.Property(x => x.Amount)
+                .HasColumnType("decimal(18, 2)")
+                .HasColumnName("AMOUNT")
+                .HasColumnOrder(10);
+                
+
+
+
+
             builder.ToTable("USER");
         }
     }

@@ -19,7 +19,7 @@ namespace X.Yönetim.Domain.Entities
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
         public Gender Gender { get; set; }
-        public Roles Role { get; set; }
+        public decimal Amount { get; set; }
 
 
         //Navigation Property
@@ -39,9 +39,5 @@ namespace X.Yönetim.Domain.Entities
         Male=1,
         Female=2
     }
-    public enum Roles
-    {
-        Admin,
-        User,
-    }
+   
 }
