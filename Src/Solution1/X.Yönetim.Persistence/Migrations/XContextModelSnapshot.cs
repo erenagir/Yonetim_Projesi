@@ -80,7 +80,7 @@ namespace X.Yönetim.Persistence.Migrations
 
                     b.Property<int>("UserId")
                         .HasColumnType("int")
-                        .HasColumnName("PERSON_ID")
+                        .HasColumnName("USER_ID")
                         .HasColumnOrder(2);
 
                     b.Property<string>("Username")

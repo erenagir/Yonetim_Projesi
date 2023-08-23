@@ -154,7 +154,7 @@ namespace X.Yönetim.Application.Services.Implementation
             {
                 throw new NotFoundException($"{updateIncomeVM.Id} numaralı gelir bulunamadı.");
             }
-            if (updateIncomeVM.BudgetId == incomeEntity.BudgetId)
+            if (!(updateIncomeVM.BudgetId == incomeEntity.BudgetId))
             {
 
                 throw new AlreadyExistsException("Bütçe bilgisi değitirilemez");

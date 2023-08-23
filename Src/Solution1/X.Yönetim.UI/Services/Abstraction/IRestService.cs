@@ -15,7 +15,7 @@ namespace X.Yönetim.UI.Services.Abstraction
 
         Task<RestResponse<TResponse>> DeleteAsync<TResponse>(string endpointUrl, bool tokenRequired = true);
 
-        Task<RestResponse<TResponse>> PutAsync<TRequest,TResponse>(TRequest requestModel, string endpointUrl, bool tokenRequired = true);
+        Task<RestResponse<TResponse>> PutAsync<TRequest, TResponse>(TRequest requestModel, string endpointUrl, bool tokenRequired = true);
 
 
     }

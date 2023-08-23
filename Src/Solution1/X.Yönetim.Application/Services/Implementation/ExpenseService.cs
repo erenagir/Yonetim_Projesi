@@ -158,7 +158,7 @@ namespace X.Yönetim.Application.Services.Implementation
             {
                 throw new NotFoundException($"{updateExpenseVM.Id} numaralı gider bulunamadı.");
             }
-            if (updateExpenseVM.BudgetId==expenseExistsEntity.BudgetId)
+            if (!(updateExpenseVM.BudgetId==expenseExistsEntity.BudgetId))
             {
 
                 throw new AlreadyExistsException("Bütçe bilgisi değitirilemez");

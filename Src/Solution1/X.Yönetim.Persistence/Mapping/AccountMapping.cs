@@ -14,7 +14,7 @@ namespace X.Yönetim.Persistence.Mapping
         public override void ConfigureDerivedEntityMapping(EntityTypeBuilder<Account> builder)
         {
             builder.Property(x => x.UserId)
-               .HasColumnName("PERSON_ID")
+               .HasColumnName("USER_ID")
                .HasColumnOrder(2);
 
             builder.Property(x => x.Username)

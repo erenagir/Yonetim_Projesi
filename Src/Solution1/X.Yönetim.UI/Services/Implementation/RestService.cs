@@ -19,7 +19,7 @@ namespace X.Yönetim.UI.Services.Implementation
             _contextAccessor = contextAccessor;
         }
 
-        
+
 
         #region Post İstekleri
 
@@ -90,7 +90,7 @@ namespace X.Yönetim.UI.Services.Implementation
         /// <param name="endpointUrl"></param>
         /// <param name="tokenRequired"></param>
         /// <returns></returns>
-        public async Task<RestResponse<TResponse>> PostFormAsync<TResponse>(Dictionary<string,string> parameters, string endpointUrl, bool tokenRequired = true)
+        public async Task<RestResponse<TResponse>> PostFormAsync<TResponse>(Dictionary<string, string> parameters, string endpointUrl, bool tokenRequired = true)
         {
             var apiUrl = _configuration["Api:Url"];
 
@@ -213,7 +213,10 @@ namespace X.Yönetim.UI.Services.Implementation
             {
                 throw new UnauthenticatedException();
             }
-            
+            else if (response.StatusCode == HttpStatusCode.Forbidden)
+            {
+                throw new UnauthorizedException();
+            }
         }
 
         private void AddFormParametersToRequest(RestRequest request, Dictionary<string, string> parameters)

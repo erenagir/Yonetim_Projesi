@@ -7,7 +7,7 @@ namespace X.Yönetim.UI.Areas.Admin.Controllers
     {
         public IActionResult Index()
         {
-            ViewBag.Header = "Ahlatçı Shop";
+            ViewBag.Header = "X yönetim";
             ViewBag.Title = "Yönetim Paneli";
             return View();
         }
