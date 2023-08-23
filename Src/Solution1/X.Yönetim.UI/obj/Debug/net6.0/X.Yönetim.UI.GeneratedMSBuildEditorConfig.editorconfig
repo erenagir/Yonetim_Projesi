@@ -16,8 +16,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\agir_\OneDrive\Masaüstü\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.UI
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/agir_/OneDrive/Masaüstü/ahlatci22/proje/Yonetim_Projesi/Src/Solution1/X.Yönetim.UI/Areas/Admin/Views/Budget/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnVkZ2V0XENyZWF0ZS5jc2h0bWw=
+[C:/Users/agir_/OneDrive/Masaüstü/ahlatci22/proje/Yonetim_Projesi/Src/Solution1/X.Yönetim.UI/Areas/Admin/Views/Budget/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnVkZ2V0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/agir_/OneDrive/Masaüstü/ahlatci22/proje/Yonetim_Projesi/Src/Solution1/X.Yönetim.UI/Areas/Admin/Views/Home/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/agir_/OneDrive/Masaüstü/ahlatci22/proje/Yonetim_Projesi/Src/Solution1/X.Yönetim.UI/Areas/Admin/Views/Home/Index.cshtml]
