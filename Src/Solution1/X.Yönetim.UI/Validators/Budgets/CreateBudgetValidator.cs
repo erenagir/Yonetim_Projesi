@@ -21,10 +21,10 @@ namespace X.Yönetim.UI.Validators.Budgets
                 .MaximumLength(50).WithMessage("Bütçe adı en fazla 50 karakter olabilir.");
 
             RuleFor(x => x.StartDate)
-                .NotEmpty().WithMessage("bütçe başlancıç bilgisi boş olamaz.");
+                .NotNull().WithMessage("bütçe başlancıç bilgisi boş olamaz.");
 
             RuleFor(x => x.StartDate)
-                .NotEmpty().WithMessage("bütçe bitiş bilgisi boş olamaz.");
+                .NotNull().WithMessage("bütçe bitiş bilgisi boş olamaz.");
 
             //RuleFor(x => x.Amount)
             //    .Must(m => decimal.TryParse(m.ToString(), out var val))

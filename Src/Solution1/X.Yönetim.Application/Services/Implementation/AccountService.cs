@@ -77,7 +77,8 @@ namespace X.Yönetim.Application.Services.Implementation
             {
                 Token = tokenString,
                 ExpireDate = expireDate,
-                Role = existsAccount.Role
+                Role = existsAccount.Role,
+                Id=existsAccount.Id
             };
             _uWork.Dispose();
             return result;

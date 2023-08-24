@@ -10,7 +10,7 @@ namespace XYönetim.Api.Controllers
 {
     [ApiController]
     [Route("budget")]
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public class BudgetController : ControllerBase
     {
 

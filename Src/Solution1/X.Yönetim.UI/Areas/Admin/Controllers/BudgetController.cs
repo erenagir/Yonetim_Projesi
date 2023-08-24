@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System.Net;
+using X.Yönetim.UI.Models.Dtos.Accounts;
 using X.Yönetim.UI.Models.Dtos.Budgets;
 using X.Yönetim.UI.Models.RequestModels.Budgets;
 using X.Yönetim.UI.Services.Abstraction;
@@ -15,20 +17,27 @@ namespace X.Yönetim.UI.Areas.Admin.Controllers
     {
         private IRestService _restService;
         private readonly IMapper _mapper;
+        private readonly IHttpContextAccessor _contextAccessor;
+        private readonly IConfiguration _configuration;
 
-        public BudgetController(IMapper mapper, IRestService restService)
+        public BudgetController(IMapper mapper, IRestService restService, IHttpContextAccessor contextAccessor, IConfiguration configuration)
         {
             _mapper = mapper;
             _restService = restService;
-            ViewBag.UserId = 1;//kullanıcı ıd si gelecek
+            _contextAccessor = contextAccessor;
+            _configuration = configuration;
         }
+       
+       
+
 
 
         public IActionResult Create()
         {
             ViewBag.Header = "Bütçe İşlemleri";
             ViewBag.Title = "Yeni bütçe Oluştur";
-
+            
+            
             return View();
         }
         [HttpPost]
@@ -50,12 +59,15 @@ namespace X.Yönetim.UI.Areas.Admin.Controllers
             }
             else // herşey yolunda
             {
-                ViewBag.UserId=
+                var sessionKey = _configuration["Application:SessionKey"];
+                var userInfo = JsonConvert.DeserializeObject<TokenDto>(_contextAccessor.HttpContext.Session?.GetString(sessionKey));
+                
+                ViewBag.UserId = userInfo.Id;//kullanıcı ıd si gelecek
                 TempData["success"] = $"{response.Data.Data} numaralı kayıt başarıyla eklendi.";
                 return RedirectToAction("List", "Budget", new { Area = "Admin" });
             }
         }
-
+        [HttpGet]
         public async Task<IActionResult> List()
         {
             ViewBag.Header = "Bütçe İşlemleri";
