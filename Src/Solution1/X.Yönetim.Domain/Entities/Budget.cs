@@ -14,6 +14,7 @@ namespace X.Yönetim.Domain.Entities
         public decimal Amount { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
+        
         public User User { get; set; }
 
         public ICollection<Income> Incomes { get; set; }

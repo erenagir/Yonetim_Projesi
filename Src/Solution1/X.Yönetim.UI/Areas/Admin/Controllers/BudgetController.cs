@@ -44,10 +44,10 @@ namespace X.Yönetim.UI.Areas.Admin.Controllers
         public async Task<IActionResult> Create(CreateBudgetVM createBudgetVM)
         {
             //Fluent validation içerisinde tanımlanan kurallardan bir veya birkaçı ihlal edildiyse
-            if (!ModelState.IsValid)
-            {
-                return View(createBudgetVM);
-            }
+            //if (!ModelState.IsValid)
+            //{
+            //    return View(createBudgetVM);
+            //}
 
             //Model validasyonu başarılı. Kaydı gerçekleştir.
             var response = await _restService.PostAsync<CreateBudgetVM, Result<int>>(createBudgetVM, "budget/create");
@@ -61,8 +61,8 @@ namespace X.Yönetim.UI.Areas.Admin.Controllers
             {
                 var sessionKey = _configuration["Application:SessionKey"];
                 var userInfo = JsonConvert.DeserializeObject<TokenDto>(_contextAccessor.HttpContext.Session?.GetString(sessionKey));
-                
-                ViewBag.UserId = userInfo.Id;//kullanıcı ıd si gelecek
+
+                ViewBag.UserId = 1;//userInfo.Id;//kullanıcı ıd si gelecek
                 TempData["success"] = $"{response.Data.Data} numaralı kayıt başarıyla eklendi.";
                 return RedirectToAction("List", "Budget", new { Area = "Admin" });
             }
@@ -84,7 +84,7 @@ namespace X.Yönetim.UI.Areas.Admin.Controllers
             }
             else
             {
-                return View(response.Data.Data);
+                return View(response.Data);
             }
         }
         public async Task<IActionResult> Edit(int id)

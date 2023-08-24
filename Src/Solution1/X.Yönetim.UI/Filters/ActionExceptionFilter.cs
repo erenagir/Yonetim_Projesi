@@ -10,7 +10,7 @@ namespace X.Yönetim.UI.Filters
     {
         public void OnException(ExceptionContext context)
         {
-          //  context.ExceptionHandled = true;
+            context.ExceptionHandled = true;
 
             var tempDataDictionaryFactory = (ITempDataDictionaryFactory)context.HttpContext.RequestServices.GetService(typeof(ITempDataDictionaryFactory));
             var tempData = tempDataDictionaryFactory.GetTempData(context.HttpContext);

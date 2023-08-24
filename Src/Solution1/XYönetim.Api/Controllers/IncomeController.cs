@@ -14,7 +14,7 @@ namespace XYönetim.Api.Controllers
 {
     [ApiController]
     [Route("income")]
-    //[Authorize]
+    [Authorize]
     public class IncomeController : ControllerBase
     {
 

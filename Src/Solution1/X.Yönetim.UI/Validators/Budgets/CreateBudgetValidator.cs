@@ -13,11 +13,11 @@ namespace X.Yönetim.UI.Validators.Budgets
         public CreateBudgetValidator()
         {
             RuleFor(x => x.UserId)
-                .NotEmpty().WithMessage("Bütçe ait kullanıcı bilgisi boş olamaz.")
+                .NotNull().WithMessage("Bütçe ait kullanıcı bilgisi boş olamaz.")
                 .GreaterThan(0).WithMessage("kullanıcı bilgisi sıfırdan büyük bir sayı olmalıdır.");
 
             RuleFor(x => x.Name)
-                .NotEmpty().WithMessage("Bütçe adı boş olamaz.")
+                .NotNull().WithMessage("Bütçe adı boş olamaz.")
                 .MaximumLength(50).WithMessage("Bütçe adı en fazla 50 karakter olabilir.");
 
             RuleFor(x => x.StartDate)

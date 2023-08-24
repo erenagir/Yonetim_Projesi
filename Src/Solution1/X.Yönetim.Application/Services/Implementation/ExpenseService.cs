@@ -166,6 +166,7 @@ namespace X.Yönetim.Application.Services.Implementation
 
             // bütce miktar bilgisi güncelleme
            var budgetExists = await _uWork.GetRepository<Budget>().GetByIdAsync(updateExpenseVM.BudgetId);
+         
             budgetExists.Amount += expenseExistsEntity.Amount;
             budgetExists.Amount -= updateExpenseVM.Amount;
 

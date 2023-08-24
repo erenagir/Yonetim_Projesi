@@ -12,7 +12,7 @@ namespace XYönetim.Api.Controllers
 {
     [ApiController]
     [Route("expense")]
-    //[Authorize]
+    [Authorize]
     public class ExpenseController : ControllerBase
     {
 

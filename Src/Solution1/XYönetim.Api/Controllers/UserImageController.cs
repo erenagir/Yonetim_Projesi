@@ -17,7 +17,7 @@ namespace XYönetim.Api.Controllers
 {
     [ApiController]
     [Route("userımage")]
-    //[Authorize]
+    [Authorize]
     public class UserImageController : ControllerBase
     {
 

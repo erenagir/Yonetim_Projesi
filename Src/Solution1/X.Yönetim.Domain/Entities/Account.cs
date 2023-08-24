@@ -22,8 +22,8 @@ namespace X.Yönetim.Domain.Entities
     }
     public enum Roles
     {
-        Admin,
-        User,
+        Admin=1,
+        User=2,
     }
 
 }

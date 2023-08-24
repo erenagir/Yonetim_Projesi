@@ -12,7 +12,7 @@ namespace XYönetim.Api.Controllers
 {
     [ApiController]
     [Route("goal")]
-    //[Authorize]
+    [Authorize]
     public class GoalController : ControllerBase
     {
 

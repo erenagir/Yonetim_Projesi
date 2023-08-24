@@ -24,7 +24,7 @@ namespace XYönetim.Api.Controllers
 
 
         [HttpGet("get")]
-        public async Task<ActionResult<Result<List<BudgetDto>>>> GetAllCities()
+        public async Task<ActionResult<Result<List<BudgetDto>>>> GetAllBudgets()
         {
             var result = await _budgetService.GetAllBudgets();
             return Ok(result);
@@ -38,13 +38,13 @@ namespace XYönetim.Api.Controllers
         }
 
         [HttpPost("create")]
-        public async Task<ActionResult<Result<int>>> CreateProduct(CreateBudgetVM createBudgetVM)
+        public async Task<ActionResult<Result<int>>> CreateBudget(CreateBudgetVM createBudgetVM)
         {
             var result = await _budgetService.CreateBudget(createBudgetVM);
             return Ok(result);
         }
         [HttpPut("update/{id:int}")]
-        public async Task<ActionResult<Result<int>>> UpdateProduct(int id, UpdateBudgetVM updateBudgetVM)
+        public async Task<ActionResult<Result<int>>> UpdateBudget(int id, UpdateBudgetVM updateBudgetVM)
         {
             if (id != updateBudgetVM.Id)
             {
