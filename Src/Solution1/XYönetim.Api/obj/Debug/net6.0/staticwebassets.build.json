@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Qw6cP9o3rlG4yu26vzJ2AlVpCsvn4IQFL1nhF1TexbA=",
+  "Hash": "70EodBIDb0u7LRYnN+yxz9mMwecRDIwxK9uaj0AU1Gs=",
   "Source": "XYönetim.Api",
   "BasePath": "_content/XYönetim.Api",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "XYönetim.Api\\wwwroot",
       "Source": "XYönetim.Api",
-      "ContentRoot": "C:\\Users\\agir_\\OneDrive\\Masaüstü\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\XYönetim.Api\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\agir_\\source\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\XYönetim.Api\\wwwroot\\",
       "BasePath": "_content/XYönetim.Api",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\agir_\\OneDrive\\Masaüstü\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\XYönetim.Api\\wwwroot\\images\\User-images\\21_8_2023_3_24_1_404.png",
+      "Identity": "C:\\Users\\agir_\\source\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\XYönetim.Api\\wwwroot\\images\\User-images\\21_8_2023_3_24_1_404.png",
       "SourceId": "XYönetim.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\agir_\\OneDrive\\Masaüstü\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\XYönetim.Api\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\agir_\\source\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\XYönetim.Api\\wwwroot\\",
       "BasePath": "_content/XYönetim.Api",
       "RelativePath": "images/User-images/21_8_2023_3_24_1_404.png",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\images\\User-images\\21_8_2023_3_24_1_404.png"
     },
     {
-      "Identity": "C:\\Users\\agir_\\OneDrive\\Masaüstü\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\XYönetim.Api\\wwwroot\\images\\User-images\\21_8_2023_3_27_16_727.png",
+      "Identity": "C:\\Users\\agir_\\source\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\XYönetim.Api\\wwwroot\\images\\User-images\\21_8_2023_3_27_16_727.png",
       "SourceId": "XYönetim.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\agir_\\OneDrive\\Masaüstü\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\XYönetim.Api\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\agir_\\source\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\XYönetim.Api\\wwwroot\\",
       "BasePath": "_content/XYönetim.Api",
       "RelativePath": "images/User-images/21_8_2023_3_27_16_727.png",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\images\\User-images\\21_8_2023_3_27_16_727.png"
     },
     {
-      "Identity": "C:\\Users\\agir_\\OneDrive\\Masaüstü\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\XYönetim.Api\\wwwroot\\images\\User-images\\21_8_2023_3_27_41_149.png",
+      "Identity": "C:\\Users\\agir_\\source\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\XYönetim.Api\\wwwroot\\images\\User-images\\21_8_2023_3_27_41_149.png",
       "SourceId": "XYönetim.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\agir_\\OneDrive\\Masaüstü\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\XYönetim.Api\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\agir_\\source\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\XYönetim.Api\\wwwroot\\",
       "BasePath": "_content/XYönetim.Api",
       "RelativePath": "images/User-images/21_8_2023_3_27_41_149.png",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\images\\User-images\\21_8_2023_3_27_41_149.png"
     },
     {
-      "Identity": "C:\\Users\\agir_\\OneDrive\\Masaüstü\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\XYönetim.Api\\wwwroot\\images\\User-images\\21_8_2023_3_30_35_623.png",
+      "Identity": "C:\\Users\\agir_\\source\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\XYönetim.Api\\wwwroot\\images\\User-images\\21_8_2023_3_30_35_623.png",
       "SourceId": "XYönetim.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\agir_\\OneDrive\\Masaüstü\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\XYönetim.Api\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\agir_\\source\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\XYönetim.Api\\wwwroot\\",
       "BasePath": "_content/XYönetim.Api",
       "RelativePath": "images/User-images/21_8_2023_3_30_35_623.png",
       "AssetKind": "All",

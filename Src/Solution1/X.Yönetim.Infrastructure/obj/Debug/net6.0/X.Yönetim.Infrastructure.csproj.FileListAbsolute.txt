@@ -10,3 +10,15 @@ C:\Users\agir_\OneDrive\Masaüstü\ahlatci22\proje\Yonetim_Projesi\Src\Solution1
 C:\Users\agir_\OneDrive\Masaüstü\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Infrastructure\obj\Debug\net6.0\refint\X.Yönetim.Infrastructure.dll
 C:\Users\agir_\OneDrive\Masaüstü\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Infrastructure\obj\Debug\net6.0\X.Yönetim.Infrastructure.pdb
 C:\Users\agir_\OneDrive\Masaüstü\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Infrastructure\obj\Debug\net6.0\ref\X.Yönetim.Infrastructure.dll
+C:\Users\agir_\source\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Infrastructure\bin\Debug\net6.0\X.Yönetim.Infrastructure.deps.json
+C:\Users\agir_\source\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Infrastructure\bin\Debug\net6.0\X.Yönetim.Infrastructure.dll
+C:\Users\agir_\source\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Infrastructure\bin\Debug\net6.0\X.Yönetim.Infrastructure.pdb
+C:\Users\agir_\source\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Infrastructure\obj\Debug\net6.0\X.Yönetim.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\agir_\source\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Infrastructure\obj\Debug\net6.0\X.Yönetim.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\agir_\source\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Infrastructure\obj\Debug\net6.0\X.Yönetim.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\agir_\source\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Infrastructure\obj\Debug\net6.0\X.Yönetim.Infrastructure.AssemblyInfo.cs
+C:\Users\agir_\source\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Infrastructure\obj\Debug\net6.0\X.Yönetim.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\agir_\source\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Infrastructure\obj\Debug\net6.0\X.Yönetim.Infrastructure.dll
+C:\Users\agir_\source\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Infrastructure\obj\Debug\net6.0\refint\X.Yönetim.Infrastructure.dll
+C:\Users\agir_\source\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Infrastructure\obj\Debug\net6.0\X.Yönetim.Infrastructure.pdb
+C:\Users\agir_\source\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Infrastructure\obj\Debug\net6.0\ref\X.Yönetim.Infrastructure.dll

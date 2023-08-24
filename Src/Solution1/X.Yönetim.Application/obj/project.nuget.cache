@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KJynKEhrFzecEaonQnud+aPGofJHMWSt0qWmCBE4Wdu+Kzl11hrIXM4hjQl+1KGKXp70NA1RKFctfIH0QSbVQQ==",
+  "dgSpecHash": "ndGagfe02Wx9YKkJzrEq9g2qRh+RwzshdsWUCpJ5lpvzKcI+9S1niGxjh1y6eFNx79lj0Psu1ig5GizfeM/XTQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\agir_\\OneDrive\\Masaüstü\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\X.Yönetim.Application\\X.Yönetim.Application.csproj",
+  "projectFilePath": "C:\\Users\\agir_\\source\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\X.Yönetim.Application\\X.Yönetim.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\agir_\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\agir_\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

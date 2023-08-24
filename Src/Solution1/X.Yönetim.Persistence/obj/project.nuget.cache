@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "k4JP4+n5aQMpoypcX++hZaT3TSVtsLI9CmKim/fABgpN3f8uTyFM4KQRjd5sZ3dMgUzbMqFywXd4Km0gM/RG/w==",
+  "dgSpecHash": "z5LjesfJOhMBigKVrgQzpQ2GaeqYReNQBC1cv87FkuYiotS8V18KVjaxmLYTGAgFf6ugI6+pokTN9SFuRAwTkg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\agir_\\OneDrive\\Masaüstü\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\X.Yönetim.Persistence\\X.Yönetim.Persistence.csproj",
+  "projectFilePath": "C:\\Users\\agir_\\source\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\X.Yönetim.Persistence\\X.Yönetim.Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\agir_\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\agir_\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

@@ -43,7 +43,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
                 }
                 else //sunum projesinde ise o projeye ait login gelsin
                 {
-                    context.Response.Redirect("/login/signin");
+                    context.Response.Redirect("/admin/login/signin");
                 }
                 return Task.CompletedTask;
             }

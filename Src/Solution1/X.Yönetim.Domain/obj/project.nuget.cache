@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "db951APbgUIikSwCdq0Tk1AKoMJrGO8yQwkczimkUpymnC5loDTo21U35l6RszD6mBdfb7Dy0znYLAN/9+/SdQ==",
+  "dgSpecHash": "UCetM+KiMCNDYnJFSO0x9YGT42mJDOuLjEhz/BgAZb1If/9rLQL9acpUiaY5SoOLyudVS9ssi3oMx9KQ8Y0buQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\agir_\\OneDrive\\Masaüstü\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\X.Yönetim.Domain\\X.Yönetim.Domain.csproj",
+  "projectFilePath": "C:\\Users\\agir_\\source\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\X.Yönetim.Domain\\X.Yönetim.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\agir_\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\agir_\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",

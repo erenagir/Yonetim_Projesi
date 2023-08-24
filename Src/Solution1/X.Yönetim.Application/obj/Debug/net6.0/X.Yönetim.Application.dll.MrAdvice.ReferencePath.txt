@@ -191,5 +191,5 @@ C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.18\ref\net6.0\System
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.18\ref\net6.0\System.Xml.XPath.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.18\ref\net6.0\System.Xml.XPath.XDocument.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.18\ref\net6.0\WindowsBase.dll
-C:\Users\agir_\OneDrive\Masaüstü\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Domain\bin\Debug\net6.0\X.Yönetim.Domain.dll
-C:\Users\agir_\OneDrive\Masaüstü\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\XYönetim.Utils\bin\Debug\net6.0\XYönetim.Utils.dll
+C:\Users\agir_\source\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\X.Yönetim.Domain\bin\Debug\net6.0\X.Yönetim.Domain.dll
+C:\Users\agir_\source\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\XYönetim.Utils\bin\Debug\net6.0\XYönetim.Utils.dll

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\agir_\\OneDrive\\Masaüstü\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\X.Yönetim.Infrastructure\\X.Yönetim.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\agir_\\source\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\X.Yönetim.Infrastructure\\X.Yönetim.Infrastructure.csproj",
       "projectName": "X.Yönetim.Infrastructure",
-      "projectPath": "C:\\Users\\agir_\\OneDrive\\Masaüstü\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\X.Yönetim.Infrastructure\\X.Yönetim.Infrastructure.csproj",
+      "projectPath": "C:\\Users\\agir_\\source\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\X.Yönetim.Infrastructure\\X.Yönetim.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\agir_\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\agir_\\OneDrive\\Masaüstü\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\X.Yönetim.Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\agir_\\source\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\X.Yönetim.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

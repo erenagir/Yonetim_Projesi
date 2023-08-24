@@ -18,12 +18,12 @@ namespace X.Yönetim.UI.Filters
             if (context.Exception is UnauthenticatedException unauthenticatedException)
             {
                 tempData["error"] = unauthenticatedException.Message;
-                context.Result = new RedirectToActionResult("SignIn", "Login", new { Area = "Admin" });
+                context.Result = new RedirectToActionResult("SignIn", "Login", routeValues: new  {Area = "admin" });
             }
             else if (context.Exception is UnauthorizedException unauthorizedException)
             {
                 tempData["error"] = unauthorizedException.Message;
-                context.Result = new RedirectToActionResult("SignIn", "Login", new { Area = "Admin" });
+                context.Result = new RedirectToActionResult("SignIn", "Login", routeValues: new { Area = "Admin" });
             }
         }
     }
