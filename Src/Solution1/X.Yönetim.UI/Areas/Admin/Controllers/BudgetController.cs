@@ -62,7 +62,7 @@ namespace X.Yönetim.UI.Areas.Admin.Controllers
                 var sessionKey = _configuration["Application:SessionKey"];
                 var userInfo = JsonConvert.DeserializeObject<TokenDto>(_contextAccessor.HttpContext.Session?.GetString(sessionKey));
 
-                ViewBag.UserId = 1;//userInfo.Id;//kullanıcı ıd si gelecek
+                ViewBag.UserId = userInfo.Id;//kullanıcı ıd si gelecek
                 TempData["success"] = $"{response.Data.Data} numaralı kayıt başarıyla eklendi.";
                 return RedirectToAction("List", "Budget", new { Area = "Admin" });
             }
@@ -75,7 +75,9 @@ namespace X.Yönetim.UI.Areas.Admin.Controllers
 
             //Apiye istek at
             //bütçe/get
-            var response = await _restService.GetAsync<Result<List<BudgetDto>>>("budget/get");
+            var sessionKey = _configuration["Application:SessionKey"];
+            var userInfo = JsonConvert.DeserializeObject<TokenDto>(_contextAccessor.HttpContext.Session?.GetString(sessionKey));
+            var response = await _restService.GetAsync<Result<List<BudgetDto>>>($"budget/get/{userInfo.Id}");
 
             if (response.StatusCode == HttpStatusCode.BadRequest)
             {

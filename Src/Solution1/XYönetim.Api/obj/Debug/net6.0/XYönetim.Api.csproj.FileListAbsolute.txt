@@ -230,3 +230,5 @@ C:\Users\agir_\source\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\XYönetim.Ap
 C:\Users\agir_\source\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\XYönetim.Api\obj\Debug\net6.0\XYönetim.Api.pdb
 C:\Users\agir_\source\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\XYönetim.Api\obj\Debug\net6.0\XYönetim.Api.genruntimeconfig.cache
 C:\Users\agir_\source\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\XYönetim.Api\obj\Debug\net6.0\ref\XYönetim.Api.dll
+C:\Users\agir_\source\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\XYönetim.Api\bin\Debug\net6.0\Elasticsearch.Net.dll
+C:\Users\agir_\source\ahlatci22\proje\Yonetim_Projesi\Src\Solution1\XYönetim.Api\bin\Debug\net6.0\Nest.dll

@@ -44,7 +44,7 @@ namespace XYönetim.Api.Controllers
         }
 
         [HttpDelete("delete/{id:int}")]
-        public async Task<ActionResult<Result<int>>> DeleteIncome(int id)
+        public async Task<ActionResult<Result<int>>> DeleteImage(int id)
         {
             var result = await _userImageService.DeleteUserImage(new DeleteUserImageVM { Id = id });
             return Ok(result);

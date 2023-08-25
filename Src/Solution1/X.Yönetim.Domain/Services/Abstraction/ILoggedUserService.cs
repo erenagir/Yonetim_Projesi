@@ -11,7 +11,8 @@ namespace X.Yönetim.Domain.Services.Abstraction
     {
         int? UserId { get; }
         string Username { get; }
-        public string Email { get; }
+        string Email { get; }
+        
 
     }
 }

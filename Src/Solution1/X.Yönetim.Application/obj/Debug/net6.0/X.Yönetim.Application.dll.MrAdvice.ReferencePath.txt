@@ -1,5 +1,6 @@
 C:\Users\agir_\.nuget\packages\automapper\12.0.1\lib\netstandard2.1\AutoMapper.dll
 C:\Users\agir_\.nuget\packages\automapper.extensions.microsoft.dependencyinjection\12.0.1\lib\netstandard2.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\agir_\.nuget\packages\elasticsearch.net\7.17.5\lib\netstandard2.1\Elasticsearch.Net.dll
 C:\Users\agir_\.nuget\packages\fluentvalidation\11.7.1\lib\net6.0\FluentValidation.dll
 C:\Users\agir_\.nuget\packages\microsoft.aspnetcore.hosting.abstractions\2.1.1\lib\netstandard2.0\Microsoft.AspNetCore.Hosting.Abstractions.dll
 C:\Users\agir_\.nuget\packages\microsoft.aspnetcore.hosting\2.1.1\lib\netstandard2.0\Microsoft.AspNetCore.Hosting.dll
@@ -37,7 +38,9 @@ C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.18\ref\net6.0\Micros
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.18\ref\net6.0\Microsoft.Win32.Registry.dll
 C:\Users\agir_\.nuget\packages\mradvice\2.12.2\lib\net6.0\MrAdvice.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.18\ref\net6.0\mscorlib.dll
+C:\Users\agir_\.nuget\packages\nest\7.17.5\lib\netstandard2.0\Nest.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.18\ref\net6.0\netstandard.dll
+C:\Users\agir_\.nuget\packages\serilog\3.0.1\lib\net6.0\Serilog.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.18\ref\net6.0\System.AppContext.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.18\ref\net6.0\System.Buffers.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.18\ref\net6.0\System.Collections.Concurrent.dll

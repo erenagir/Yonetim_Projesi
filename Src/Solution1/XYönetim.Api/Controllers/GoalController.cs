@@ -26,27 +26,27 @@ namespace XYönetim.Api.Controllers
 
 
         [HttpGet("get")]
-        public async Task<ActionResult<Result<List<GoalDto>>>> GetAllCities()
+        public async Task<ActionResult<Result<List<GoalDto>>>> GetAllGoals()
         {
             var result = await _goalService.GetAllGoals();
             return Ok(result);
         }
 
         [HttpGet("get/{id:int}")]
-        public async Task<ActionResult<Result<GoalDto>>> GetBudgetById(int id)
+        public async Task<ActionResult<Result<GoalDto>>> GetGoalById(int id)
         {
             var result = await _goalService.GetGoalById(new GetGoalByIdVM { Id=id});
             return Ok(result);
         }
 
         [HttpPost("create")]
-        public async Task<ActionResult<Result<int>>> CreateProduct(CreateGoalVM createGoalVM)
+        public async Task<ActionResult<Result<int>>> CreateGoal(CreateGoalVM createGoalVM)
         {
             var result = await _goalService.CreateGoal(createGoalVM);
             return Ok(result);
         }
         [HttpPut("update/{id:int}")]
-        public async Task<ActionResult<Result<int>>> UpdateProduct(int id, UpdateGoalVM updateGoalVM)
+        public async Task<ActionResult<Result<int>>> UpdateGoal(int id, UpdateGoalVM updateGoalVM)
         {
             if (id != updateGoalVM.Id)
             {
@@ -56,7 +56,7 @@ namespace XYönetim.Api.Controllers
             return Ok(result);
         }
         [HttpDelete("delete/{id:int}")]
-        public async Task<ActionResult<Result<int>>> DeleteBudget(int id)
+        public async Task<ActionResult<Result<int>>> DeleteGoal(int id)
         {
             var result   = await _goalService.DeleteGoal(new DeleteGoalVM { Id = id });
             return Ok(result);

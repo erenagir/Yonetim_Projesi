@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "APsBh/Y5hPCzyRFLuucMK6BUITFweJ8+rV/958IyqVRM9AfNLcKlMxjK2F2QdKXnoZfi50mzJ+wZL+eGIsBOGg==",
+  "dgSpecHash": "H3XrLqDpM/0g0ihjACy/GOcJ9oWMw/+Y5/7Bnvtm1HlnuZwW0b9fUcbubSP029/QQvViCpeu/2kabNyHBXBvHA==",
   "success": true,
   "projectFilePath": "C:\\Users\\agir_\\source\\ahlatci22\\proje\\Yonetim_Projesi\\Src\\Solution1\\XYönetim.Api\\XYönetim.Api.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\agir_\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\agir_\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\agir_\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\agir_\\.nuget\\packages\\elasticsearch.net\\7.17.5\\elasticsearch.net.7.17.5.nupkg.sha512",
     "C:\\Users\\agir_\\.nuget\\packages\\fluentvalidation\\11.7.1\\fluentvalidation.11.7.1.nupkg.sha512",
     "C:\\Users\\agir_\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.7.1\\fluentvalidation.dependencyinjectionextensions.11.7.1.nupkg.sha512",
     "C:\\Users\\agir_\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
@@ -68,6 +69,7 @@
     "C:\\Users\\agir_\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\agir_\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\agir_\\.nuget\\packages\\mradvice\\2.12.2\\mradvice.2.12.2.nupkg.sha512",
+    "C:\\Users\\agir_\\.nuget\\packages\\nest\\7.17.5\\nest.7.17.5.nupkg.sha512",
     "C:\\Users\\agir_\\.nuget\\packages\\serilog\\3.0.1\\serilog.3.0.1.nupkg.sha512",
     "C:\\Users\\agir_\\.nuget\\packages\\serilog.aspnetcore\\7.0.0\\serilog.aspnetcore.7.0.0.nupkg.sha512",
     "C:\\Users\\agir_\\.nuget\\packages\\serilog.extensions.hosting\\7.0.0\\serilog.extensions.hosting.7.0.0.nupkg.sha512",

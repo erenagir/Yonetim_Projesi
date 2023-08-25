@@ -115,7 +115,7 @@ namespace X.Yönetim.Application.Services.Implementation
                 throw new NotFoundException($"{deleteBudgetVM.Id} numaralı bütçe bulunamadı.");
             }
 
-            _uWork.GetRepository<Budget>().Delete(existsBudget);
+            _uWork.GetRepository<Budget>().Delete(deleteBudgetVM.Id);
             await _uWork.CommitAsync();
             result.Data = existsBudget.Id;
             _uWork.Dispose();

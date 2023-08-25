@@ -26,7 +26,7 @@ namespace X.Yönetim.Domain.Services.Implementation
 
         public string Email => GetClaim(ClaimTypes.Email) != null ? GetClaim(ClaimTypes.Email) : null;
 
-
+        
 
         private string GetClaim(string claimType)
         {

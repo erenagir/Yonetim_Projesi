@@ -30,7 +30,7 @@ namespace X.Yönetim.Application.Services.Implementation
             _mapper = mapper;
             _uWork = uWork;
         }
-
+        [ValidationBehavior(typeof(GetUserByIdValidator))]
         public async Task<Result<UserDto>> GetUser(GetUserbyIdVM getUserbyIdVM)
         {
             var result = new Result<UserDto>();
