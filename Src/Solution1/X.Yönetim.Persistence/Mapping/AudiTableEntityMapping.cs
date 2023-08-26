@@ -12,7 +12,7 @@ namespace X.Yönetim.Persistence.Mapping
     public abstract class AudiTableEntityMapping<T> : IEntityTypeConfiguration<T> where T : AudiTableEntity
     {
         public abstract void ConfigureDerivedEntityMapping(EntityTypeBuilder<T> builder);
-        public void Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<T> builder)
+        public void Configure(EntityTypeBuilder<T> builder)
         {
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id)

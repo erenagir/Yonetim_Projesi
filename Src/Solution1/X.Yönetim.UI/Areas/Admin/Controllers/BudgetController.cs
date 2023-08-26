@@ -43,11 +43,11 @@ namespace X.Yönetim.UI.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(CreateBudgetVM createBudgetVM)
         {
-            //Fluent validation içerisinde tanımlanan kurallardan bir veya birkaçı ihlal edildiyse
-            //if (!ModelState.IsValid)
-            //{
-            //    return View(createBudgetVM);
-            //}
+           // Fluent validation içerisinde tanımlanan kurallardan bir veya birkaçı ihlal edildiyse
+            if (!ModelState.IsValid)
+            {
+                return View(createBudgetVM);
+            }
 
             //Model validasyonu başarılı. Kaydı gerçekleştir.
             var response = await _restService.PostAsync<CreateBudgetVM, Result<int>>(createBudgetVM, "budget/create");
@@ -77,7 +77,7 @@ namespace X.Yönetim.UI.Areas.Admin.Controllers
             //bütçe/get
             var sessionKey = _configuration["Application:SessionKey"];
             var userInfo = JsonConvert.DeserializeObject<TokenDto>(_contextAccessor.HttpContext.Session?.GetString(sessionKey));
-            var response = await _restService.GetAsync<Result<List<BudgetDto>>>($"budget/get/{userInfo.Id}");
+            var response = await _restService.GetAsync<Result<List<BudgetDto>>>("budget/get");
 
             if (response.StatusCode == HttpStatusCode.BadRequest)
             {

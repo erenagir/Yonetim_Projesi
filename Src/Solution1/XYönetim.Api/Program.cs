@@ -110,8 +110,8 @@ builder.Services.AddValidatorsFromAssemblyContaining(typeof(CreateBudgetValidato
 builder.Services.AddAutoMapper(typeof(DomainToDtoModel), typeof(ViewModelToDomain));
 
 
-//FluentValidation Ýstekte gönderilen modele ait property'lerin istenen formatý destekleyip desteklemediðini anlamamýzý saðlar.
-builder.Services.AddValidatorsFromAssemblyContaining(typeof(LoginValidator));
+////FluentValidation Ýstekte gönderilen modele ait property'lerin istenen formatý destekleyip desteklemediðini anlamamýzý saðlar.
+//builder.Services.AddValidatorsFromAssemblyContaining(typeof(LoginValidator));
 
 // JWT kimlik doðrulama servisini ekleme
 builder.Services.AddAuthentication(opt =>

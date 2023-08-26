@@ -109,13 +109,13 @@ namespace X.Yönetim.Application.Services.Implementation
         {
             var result = new Result<int>();
 
-            var existsBudget = await _uWork.GetRepository<Budget>().GetByIdAsync(deleteBudgetVM);
+            var existsBudget = await _uWork.GetRepository<Budget>().GetByIdAsync(deleteBudgetVM.Id);
             if (existsBudget is null)
             {
                 throw new NotFoundException($"{deleteBudgetVM.Id} numaralı bütçe bulunamadı.");
             }
 
-            _uWork.GetRepository<Budget>().Delete(deleteBudgetVM.Id);
+            _uWork.GetRepository<Budget>().Delete(existsBudget);
             await _uWork.CommitAsync();
             result.Data = existsBudget.Id;
             _uWork.Dispose();
